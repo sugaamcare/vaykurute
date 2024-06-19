@@ -628,6 +628,7 @@ footer .container .sci{
     margin-top: 20px;
     display:grid;
     grid-template-columns: repeat(4,50px);
+    justify-content: center;
 
 }
 footer .container .sci li{
