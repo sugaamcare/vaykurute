@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Layout</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="style1.css">
+    
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"> -->
     <script src="scripts.js"></script>
 </head>
 <body>
@@ -21,7 +22,7 @@
           <i class="material-icons">list</i>
         </label>
         <label class="logo">VYAKurute</label>
-        <ul>
+        <ul class="navb">
           <li><a class="active" href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Services</a></li>
@@ -151,7 +152,7 @@
     </section>
     
     
-    <div class="testimonials-section">
+    <!-- <div class="testimonials-section">
         <h2>Testimonials</h2>
         <p class="subtitle">Lorem ipsum dolor sit amet</p>
         <div class="testimonials-slider">
@@ -205,8 +206,8 @@
                 <p class="quote">Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam.</p>
             </div>
         </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </div> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
         $(document).ready(function(){
@@ -236,58 +237,54 @@
                 ]
             });
         });
-    </script>
-<footer>
-    <div class="footer-container">
-        <div class="support-section">
-            <h2>Still You Need Our <span>Support</span>?</h2>
-            <p>Don’t wait make a smart & logical quote here. Its pretty easy.</p>
-            <form class="subscribe-form">
-                <input type="email" placeholder="Enter your email here">
-                <button type="submit">Subscribe Now</button>
-            </form>
-        </div>
-        <div class="footer-content">
-            <div class="about-us">
-                <h3>About us</h3>
+    </script> -->
+    <footer>
+        <div class="container">
+            <div class="sec aboutus">
+                <h2>Vyakurute</h2>
                 <p>Vyakurute is a code school exclusively focused on solving entry level tech hiring for high growth ventures. We were founded in June 2018. We are on a mission to make 100K great entry level software engineers.</p>
-                <div class="opening-hours">
-                    <div class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M12 20c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0 2c-5.523 0-10-4.477-10-10s4.477-10 10-10 10 4.477 10 10-4.477 10-10 10zm-.5-15h1v6.25l5.25 3.15-.5.85-6-3.6v-6.65z"/></svg>
-                    </div>
-                    <div class="hours">
-                        <p>OPENING HOURS</p>
-                        <p>Mon - Sat(8.00 - 6.00)</p>
-                        <p>Sunday - Closed</p>
-                    </div>
-                </div>
-            </div>
-            <div class="quick-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Services</a></li>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
                 </ul>
             </div>
-            <div class="reach-us">
-                <h3>Reach Us</h3>
-                <p>Ahmedabad, INDIA</p>
-                <p><a href="mailto:info@vyakurute.com">info@vyakurute.com</a></p>
-                <p><a href="tel:+919167222521">+91 91672 22521</a></p>
+            <div class="quicklinks">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact US</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span>
+                            <i class="fa-solid fa-phone"></i>
+                        </span><p><a href="tel:+919167222521">Call us at +919167222521</a></p>
+                    </li>
+                    <li>
+                        <span>
+                            <i class="fa-solid fa-envelope"></i>
+                        </span><p><a href="mailto:info@vyakurute.com">Mail us at:info@vyakurute.com</a></p>
+                    </li>
+                    <li>
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                        </span><p><a href="#">Ahmedabad , INDIA</a></p>
+                    </li>
+
+                </ul>
             </div>
         </div>
-        <div class="social-links">
-            <a href="#"><img src="images/facebook.png" alt="Twitter"></a>
-            <a href="#"><img src="images/007-youtube.png" alt="Vimeo"></a>
-            <a href="#"><img src="images/twitter.png" alt="LinkedIn"></a>
-            
-        </div>
-        <div class="footer-bottom">
-            <p>© 2024 by <a href="https://sugaam.in/">Sugaam</a> All Rights Reserved.</p>
-        </div>
+    </footer>
+    <div class="copyrighttext">
+        <p>copyright &#169 2024 Sugaam. All Rights Reserved</p>
     </div>
-</footer>
-   
 </body>
+
 </html>

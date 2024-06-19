@@ -159,7 +159,7 @@ body {
     .checkbtn{
       display: block;
     }
-    ul{
+    nav ul{
       position: fixed;
       width: 100%;
       height: 100vh;
@@ -203,6 +203,7 @@ body {
     flex: 1;
     padding: 20px;
     max-width: 600px;
+    
 }
 
 .text-content h1 {
@@ -218,7 +219,7 @@ body {
 }
 
 .btn {
-    background-color: #ff4c4c;
+    background-color:blue;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -229,6 +230,7 @@ body {
 .image-content {
     flex: 1;
     text-align: center;
+    
 }
 
 .image-content img {
@@ -258,10 +260,12 @@ body {
 
     .text-content {
         max-width: 100%;
+        order: 2;
     }
 
     .image-content {
         margin-top: 20px;
+        order: 1;
     }
 
     .text-content h1 {
@@ -507,7 +511,7 @@ body {
         font-size: 0.85em;
     }
 }
-.testimonials-section {
+/* .testimonials-section {
     text-align: center;
     padding: 40px 20px;
     max-width: 1200px;
@@ -590,7 +594,129 @@ body {
 
 @media (max-width: 600px) {
     .testimonial-item {
-        max-width: 90%;
+        max-width: 100%;
+    }
+} */
+footer{
+    
+    
+    
+    position: relative;
+    width: 100%;
+    height:auto;
+    padding: 50px 100px;
+    background: #A051A2;
+} 
+footer .container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+}
+footer .container .sec h2{
+    position: relative;
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 15px;
+
+}
+footer .container .sec p{
+    color: #fff;
+}
+footer .container .sci{
+    margin-top: 20px;
+    display:grid;
+    grid-template-columns: repeat(4,50px);
+
+}
+footer .container .sci li{
+    list-style:none;
+
+}
+footer .container .sci li a{
+    display: inline-block;
+    width: 36px; 
+    height: 36px;
+    background: #000;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+}
+footer .container .sci li a i {
+    color: #fff;
+    font-size: 20px;
+
+}
+footer .container .quicklinks h2{
+    margin-bottom: 15px;
+
+}
+footer .container .quicklinks ul li {
+    list-style: none;
+
+}
+footer .container .quicklinks ul li a{
+    color: #fff;;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+footer .container .contact .info{
+    list-style: none;
+    position: relative;   
+
+}
+footer .container .contact h2{
+    margin-bottom: 15px;
+
+}
+footer .container .contact .info li{
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    margin-bottom: 16px;
+}
+footer .container .contact .info li span{
+        color: #000;
+    font-size: 20px;
+
+}
+footer .container .contact .info li a{
+    color: #fff;
+    text-decoration: none;
+
+}
+.copyrighttext{
+    width: 100%;
+    background: #A051A2;
+    padding: 20px 100px 30px;
+    text-align: center;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+@media (max-width:991px) {
+    footer{
+        padding: 40px;
+        
+    }
+    footer .container{
+        width: 100%;
+        display: grid;
+        grid-template-columns:repeat(2,1fr);
+        grid-gap: 20px;
+    
+    }
+    .copyrighttext{
+        padding: 20px 40px 30px;
     }
 }
-  
+@media(max-width:768px){
+    footer .container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 20px;
+    
+    }
+}
