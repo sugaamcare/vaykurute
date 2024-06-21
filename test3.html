@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experion Technologies</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"> -->
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+            body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .section {
+            padding: 50px 20px;
+        }
+        .section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: black; /* Dark Blue */
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .card {
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .services {
+            padding: 50px 20px;
+        }
+        .services h2 {
+            text-align: center;
+            color:black; /* Dark Black */
+            margin-bottom: 30px;
+        }
+        .service-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
+            gap: 20px;
+        }
+        .service-card {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s, border 0.3s;
+            border: 2px solid transparent; /* Initial transparent border */
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            border: 2px solid #d8649b; /* Pink border on hover */
+        }
+        .service-card img {
+            max-width: 50px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .service-card h3 {
+            color: black; /* Dark Black */
+            margin-bottom: 10px;
+        }
+        .service-card p {
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            .services {
+                padding: 40px 20px; /* Adjusted padding for medium screens */
+            }
+            .services h2 {
+                font-size: 1.8rem;
+            }
+            .service-cards {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+            }
+        }
+
+        @media (max-width: 428px) {
+            
+            .services {
+                padding: 20px 10px; /* Adjusted padding for small screens */
+            }
+            .services h2 {
+                font-size: 1.5rem;
+            }
+            .service-cards {
+                grid-template-columns: 1fr; /* 1 column for small screens */
+            }
+            .service-card {
+                padding: 15px;
+            }
+            .service-card h3 {
+                font-size: 1.2rem;
+            }
+            .service-card p {
+                font-size: 0.9rem;
+            }
+        }
+
+        .banner-container {
+            position: relative;
+            width: 100%;
+            max-width: 1920px;
+            margin: auto;
+            overflow: hidden;
+            height: 100vh; /* Ensure banner takes up full viewport height */
+        }
+        .banner-slide {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+        .banner-slide.active {
+            display: block;
+        }
+        .banner-button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: #d8649b;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 2;
+            opacity: 0;
+            animation: fadeIn 1s forwards 1s;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .arrow.left {
+            left: 10px;
+        }
+        .arrow.right {
+            right: 10px;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        @media (max-width: 768px) {
+            .banner-button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+            .arrow {
+                font-size: 1.5rem;
+                padding: 8px;
+            }
+        }
+        @media (max-width: 428px) {
+            .banner-button {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+            .arrow {
+                font-size: 1.2rem;
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          
+          <i class="material-icons">list</i>
+        </label>
+        <label class="logo"><picture>
+            <source media="(max-width: 768px)" srcset="smalllogo.png">
+            <img src="biglogo.png" alt="Vyakurute" class="banner-img">
+          </picture></label>
+        <ul class="navb">
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Product Engineering</a></li>
+          <li><a href="#">Career</a></li>
+          <li><a href="#">Contact US</a></li>
+          
+        </ul>
+    </nav>
+      <!-- navbar ends -->
+    
+    <div class="banner-container">
+        <div class="banner-slide active" style="background-image: url('banner1.jpg');">
+            <button class="banner-button">Know More</button>
+        </div>
+        <div class="banner-slide" style="background-image: url('banner2.jpg');">
+            <button class="banner-button">Know More</button>
+        </div>
+        <div class="banner-slide" style="background-image: url('banner3.jpg');">
+            <button class="banner-button">Know More</button>
+        </div>
+        <div class="banner-slide" style="background-image: url('banner1.jpg');">
+            <button class="banner-button">Know More</button>
+        </div>
+        <div class="banner-slide" style="background-image: url('banner4.jpg');">
+            <button class="banner-button">Know More</button>
+        </div>
+        <div class="banner-slide" style="background-image: url('images/DALL·E\ 2024-06-18\ 18.42.50\ -\ A\ detailed\ and\ vibrant\ scene\ depicting\ data\ engineering.\ The\ image\ features\ a\ modern\ office\ environment\ with\ a\ team\ of\ engineers\ working\ on\ various\ da.webp');">
+            <button class="banner-button">Know More</button>
+        </div>
+        <span class="arrow left">&#10094;</span>
+        <span class="arrow right">&#10095;</span>
+    </div>
+    <!-- new banner -->
+    
+      <!-- newbannerends -->
+
+    <section class="section">
+        <h2>Explore</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="explore.png" alt="Explore">
+                <h3>Explore</h3>
+                <p>We embody the essential process of continuous learning and experimentation necessary to identify and solve problems...</p>
+            </div>
+            <div class="card">
+                <img src="engineer.png" alt="Engineer">
+                <h3>Engineer</h3>
+                <p>We are set apart by our passion for innovation and our unique blend of technical expertise, creative thinking...</p>
+            </div>
+            <div class="card">
+                <img src="excel.png" alt="Excel">
+                <h3>Excel</h3>
+                <p>Our foundation for building trust, establishing a competitive edge, and creating long-lasting relationships...</p>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <h2>Our Values</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="ethics.png" alt="Ethics">
+                <h3>Ethics</h3>
+                <p>Our commitment to ethical business practices and transparent communication forms the foundation of all our interactions...</p>
+            </div>
+            <div class="card">
+                <img src="empathy.png" alt="Empathy">
+                <h3>Empathy</h3>
+                <p>At Experion, we prioritize putting ourselves in our clients' shoes to understand their needs and craft exceptional digital solutions...</p>
+            </div>
+            <div class="card">
+                <img src="Excellence.png" alt="Excellence">
+                <h3>Excellence</h3>
+                <p>Continuously striving for excellence in all that we do, from delivering high-quality solutions to fostering a positive work environment...</p>
+            </div>
+        </div>
+    </section>
+    <section class="services">
+        <h2>What We Do</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <img src="strategy.png" alt="Strategy & Consulting">
+                <h3>Strategy & Consulting</h3>
+                <p>Leverage our expertise in technology and business for expert guidance on the product development journey, from ideation to market launch, by optimizing product design, development, and deployment.</p>
+            </div>
+            <div class="service-card">
+                <img src="dev.png" alt="DevSecOps">
+                <h3>DevSecOps</h3>
+                <p>Powered by our expertise in Cloud Engineering, DevSecOps enables rapid and agile software delivery while ensuring the security and compliance of the entire process.</p>
+            </div>
+            <div class="service-card">
+                <img src="platform.png" alt="Platform Engineering">
+                <h3>Platform Engineering</h3>
+                <p>Comprehensive platform engineering services to design, develop, and maintain robust and scalable platforms to serve as an integrated and secure infrastructure for orchestrating various products.</p>
+            </div>
+            <div class="service-card">
+                <img src="exdesign.png" alt="Experience Design">
+                <h3>Experience Design</h3>
+                <p>Human-centered UI/UX services that create compelling product experiences through empathy, innovation, and a deep understanding of customer needs.</p>
+            </div>
+            <div class="service-card">
+                <img src="application.png" alt="Application Modernization">
+                <h3>Application Modernization</h3>
+                <p>Leverage cutting-edge technology to transform legacy systems into future-ready, user-centric digital solutions that drive business growth and success.</p>
+            </div>
+            <div class="service-card">
+                <img src="engineering.png" alt="Emerging Tech">
+                <h3>Emerging Tech</h3>
+                <p>Integrating blockchain, IoT, cloud computing, and AR/VR technology to create cutting-edge solutions that drive digital transformation and provide a sustainable competitive advantage for our clients.</p>
+            </div>
+            <div class="service-card">
+                <img src="data.png" alt="Data & AI">
+                <h3>Data & AI</h3>
+                <p>Harness the power of data and artificial intelligence to drive digital transformation, deliver actionable insights, and create intelligent and automated solutions for our clients.</p>
+            </div>
+            <div class="service-card">
+                <img src="software.png" alt="Software Development">
+                <h3>Software Development</h3>
+                <p>End-to-end software development services that transform ideas into cutting-edge, user-centric digital solutions that drive business success.</p>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.banner-slide');
+        const totalSlides = slides.length;
+        const prevArrow = document.querySelector('.arrow.left');
+        const nextArrow = document.querySelector('.arrow.right');
+
+        function showSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (index + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        nextArrow.addEventListener('click', nextSlide);
+        prevArrow.addEventListener('click', prevSlide);
+
+        setInterval(nextSlide, 4000); // Auto-slide every 4 seconds
+    </script>
+    <footer>
+        <div class="container">
+            <div class="sec aboutus">
+                <img src="biglogo.png"alt="logo">
+                
+                <p>Vyakurute is a code school exclusively focused on solving entry level tech hiring for high growth ventures. We were founded in June 2018. We are on a mission to make 100K great entry level software engineers.</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="quicklinks">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">About US</a></li>
+                    <li><a href="">Product Engineering</a></li>
+                    <li><a href="">Career</a></li>
+                    <li><a href="">Contact US</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span>
+                            <i class="fa-solid fa-phone"></i>
+                        </span><p><a href="tel:+919167222521">Call us at +919167222521</a></p>
+                    </li>
+                    <li>
+                        <span>
+                            <i class="fa-solid fa-envelope"></i>
+                        </span><p><a href="mailto:info@vyakurute.com">Mail us:info@vyakurute.com</a></p>
+                    </li>
+                    <li>
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                        </span><p><a href="#">Ahmedabad , INDIA</a></p>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="copyrighttext">
+        <p>copyright &#169 2024 Sugaam. All Rights Reserved</p>
+    </div>
+</body>
+</html>

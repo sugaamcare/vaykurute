@@ -13,6 +13,197 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"> -->
     <script src="scripts.js"></script>
 </head>
+<style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.section {
+    padding: 50px 20px;
+}
+.section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black; /* Dark Blue */
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.card {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: translateY(-10px);
+}
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.services {
+    padding: 50px 20px;
+}
+.services h2 {
+    text-align: center;
+    color:black; /* Dark Black */
+    margin-bottom: 30px;
+}
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
+    gap: 20px;
+}
+.service-card {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, border 0.3s;
+    border: 2px solid transparent; /* Initial transparent border */
+}
+.service-card:hover {
+    transform: translateY(-10px);
+    border: 2px solid #d8649b; /* Pink border on hover */
+}
+.service-card img {
+    max-width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+.service-card h3 {
+    color: black; /* Dark Black */
+    margin-bottom: 10px;
+}
+.service-card p {
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .services {
+        padding: 40px 20px; /* Adjusted padding for medium screens */
+    }
+    .services h2 {
+        font-size: 1.8rem;
+    }
+    .service-cards {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+}
+
+@media (max-width: 428px) {
+    
+    .services {
+        padding: 20px 10px; /* Adjusted padding for small screens */
+    }
+    .services h2 {
+        font-size: 1.5rem;
+    }
+    .service-cards {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+    }
+    .service-card {
+        padding: 15px;
+    }
+    .service-card h3 {
+        font-size: 1.2rem;
+    }
+    .service-card p {
+        font-size: 0.9rem;
+    }
+}
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    
+    overflow: hidden;
+    height: 100vh; /* Ensure banner takes up full viewport height */
+}
+.banner-slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.banner-slide.active {
+    display: block;
+}
+.banner-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #d8649b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 2;
+    opacity: 0;
+    animation: fadeIn 1s forwards 1s;
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+.arrow.left {
+    left: 10px;
+}
+.arrow.right {
+    right: 10px;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+@media (max-width: 768px) {
+    .banner-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    .arrow {
+        font-size: 1.5rem;
+        padding: 8px;
+    }
+}
+@media (max-width: 428px) {
+    .banner-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+    .arrow {
+        font-size: 1.2rem;
+        padding: 6px;
+    }
+}
+</style>
 <body>
     <!-- navbar -->
     <nav>
@@ -21,134 +212,127 @@
           
           <i class="material-icons">list</i>
         </label>
-        <label class="logo"><img src="images/logo.png" alt="logo"></label>
+        <label class="logo"><picture>
+            <source media="(max-width: 768px)" srcset="smalllogo.png">
+            <img src="biglogo.png" alt="Vyakurute" class="banner-img">
+          </picture></label>
         <ul class="navb">
           <li><a class="active" href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
+          <li><a href="#">About US</a></li>
+          <li><a href="#">Product Engineering</a></li>
+          <li><a href="#">Career</a></li>
           <li><a href="#">Contact US</a></li>
           
         </ul>
       </nav>
       <!-- navbar ends -->
-      <!-- banner sectionn -->
-      <br/><br/><br/><br/>
-      <header class="banner">
-        <div class="banner-content">
-            <div class="text-content">
-                <h1>Fueling Business Success with Superior Solutions.</h1>
-                <p>Stay at the leading edge with our bespoke digital solutions, crafted precisely for your business needs.Let us help you lead the pack with state-of-the-art digital solutions that are as unique as your business needs.</p>
-                <a href="#" class="btn">Contact US</a>
-            </div>
-            <div class="image-content">
-                <img src="images/ban.webp" alt="Empowering businesses by delivering world-class solutions">
-            </div>
+      
+      <div class="banner-container">
+        <div class="banner-slide active" style="background-image: url('banner1.jpg');">
+            <button class="banner-button">Know More</button>
         </div>
-    </header>
-      <!-- banner section ends -->
-      <!-- components section starts -->
-      <div class="why-choose-us">
-        <h2>Our Products</h2>
-      </div>
-      <div class="grid-container">
-        <div class="grid-item">
-            <img src="images/DALL·E 2024-06-18 18.41.06 - A vibrant and dynamic scene depicting software product development. The image includes a diverse team of developers collaborating in a modern office e.webp" alt="Image 1">
-            <h2>Software product Devlopment</h2>
-            <p>Generic digital products just don't cut it anymore. Our custom product development services & solutions help you build superior, impactful, & differentiated digital products that address your customers' evolving needs.</p>
+        <div class="banner-slide" style="background-image: url('banner2.jpg');">
+            <button class="banner-button">Know More</button>
         </div>
-        <div class="grid-item">
-            <img src="images/DALL·E 2024-06-18 18.41.54 - A futuristic and vibrant scene showcasing artificial intelligence. The image features a sleek, high-tech lab with advanced computers, holographic disp.webp" alt="Image 2">
-            <h2>Artificial Intelligence</h2>
-            <p>Reinvent your business operations with truly intelligent systems.Explore the endless possibilities of AI in your business. With contextual AI systems, we help you improve your workflows, enhance decision-making, and make better use of your data.</p>
+        <div class="banner-slide" style="background-image: url('banner3.jpg');">
+            <button class="banner-button">Know More</button>
         </div>
-        <div class="grid-item">
-            <img src="images/DALL·E 2024-06-18 18.42.50 - A detailed and vibrant scene depicting data engineering. The image features a modern office environment with a team of engineers working on various da.webp" alt="Image 3">
-            <h2>Data Engineering</h2>
-            <p>Deliver high-performing data solutions, drive actionable insights and meet strategic business goals by leveraging a combination of highly skilled engineers and mature data platforms.</p>
+        <div class="banner-slide" style="background-image: url('banner4.jpg');">
+            <button class="banner-button">Know More</button>
         </div>
-        <div class="grid-item">
-            <img src="images/DALL·E 2024-06-18 18.43.31 - A vibrant and modern scene depicting cloud application development. The image features a team of developers working in a contemporary office with larg.webp" alt="Image 4">
-            <h2>Cloud Application</h2>
-            <p>Rise to the cloud and leave the hardware bulk behind. Accelerate the transition to a scalable, risk-mitigated solution and work remotely with applications that are secure, updated, responsive, and cost-efficient through our cloud application development services.</p>
+        <div class="banner-slide" style="background-image: url('images/DALL·E 2024-06-18 18.44.17 - A detailed and vibrant scene depicting automation testing in software development. The image features a team of testers and developers working in a mo.webp');">
+            <button class="banner-button">Know More</button>
         </div>
-        <div class="grid-item">
-            <img src="images/DALL·E 2024-06-18 18.44.17 - A detailed and vibrant scene depicting automation testing in software development. The image features a team of testers and developers working in a mo.webp" alt="Image 5">
-            <h2>Automation testing</h2>
-            <p>Drive innovation and outperform competitors with our UI test automation services. Embrace continuous testing, achieve agile delivery, and stay ahead in the digital era.</p>
+        <div class="banner-slide" style="background-image: url('banner2.jpg');">
+            <button class="banner-button">Know More</button>
         </div>
-        <div class="grid-item">
-            <img src="images/DALL·E 2024-06-18 18.46.25 - A detailed and vibrant scene depicting maintenance support in an IT environment. The image features a team of IT professionals working in a modern off.webp" alt="Image 6">
-            <h2>Maintenance Support</h2>
-            <p>Transform your enterprise into more adaptable, scalable, and future-ready with Maruti Techlabs. Accelerate your business growth by leveraging the expertise of IT infrastructure specialists.</p>
-        </div>
+        <span class="arrow left">&#10094;</span>
+        <span class="arrow right">&#10095;</span>
     </div>
-    <!-- components section ends -->
-    <div class="why-choose-us">
-        <h2>Why Choose Us??</h2>
-        <p class="subtitle">why work with us</p>
-        <div class="content">
-            <div class="column left-column">
-                <div class="item">
-                    <img src="images/DALL·E 2024-06-18 18.56.12 - An icon representing 'experience.' The icon features a sleek and modern design with a human silhouette at the center, symbolizing a person. Surroundin.webp" alt="Experience">
-                    <h3>Experience</h3>
-                    <p>Choose us for unmatched experience where longstanding industry knowledge meets cutting-edge technology solutions.InnovaTech, a startup with a backbone of experienced professionals from the semiconductor industry, is set to revolutionize IoT and smart device technology with innovative, reliable solutions.</p>
-                </div>
-                <div class="item">
-                    <img src="images/DALL·E 2024-06-18 18.56.58 - An icon representing 'products.' The icon features a clean and modern design with a stylized shopping bag at the center, symbolizing products. Inside .webp" alt="Products">
-                    <h3>Products</h3>
-                    <p>Choose us for innovative products that merge the latest technology with user-centric designs, ensuring seamless integration and enhanced performance.Protect your enterprise with Quantum Defender, a comprehensive cybersecurity suite designed by industry veterans, featuring real-time threat detection, automated incident response, and tailored security protocols</p>
-                </div>
-                <div class="item">
-                    <img src="images/DALL·E 2024-06-18 18.57.32 - An icon representing 'approach.' The icon features a clean and modern design with an arrow at the center, symbolizing direction and strategy. Surround.webp" alt="Approach">
-                    <h3>Approach</h3>
-                    <p>Choose us for our innovative approach that blends cutting-edge technology with tailored solutions, ensuring your IT needs are met with precision and efficiency Focus on continual innovation by investing in research and development, encouraging creative problem-solving, and staying ahead of technological advancements.</p>
-                </div>
-            </div>
-            <div class="center-image">
-                <img src="images/DALL·E 2024-06-18 18.41.06 - A vibrant and dynamic scene depicting software product development. The image includes a diverse team of developers collaborating in a modern office e.webp" alt="Center Image">
-            </div>
-            <div class="column right-column">
-                <div class="item">
-                    <img src="images/DALL·E 2024-06-18 19.00.10 - An icon representing 'pricing.' The icon features a clean and modern design with a price tag at the center, symbolizing cost and value. Inside the pri.webp" alt="Pricing">
-                    <h3>Pricing</h3>
-                    <p>Comprehensive IT services with premium support for large organizations.Prices are set based on the perceived value to the customer rather than the cost of the product or service.Different levels of pricing are set based on features, usage, or other differentiators.</p>
-                </div>
-                <div class="item">
-                    <img src="images/DALL·E 2024-06-18 18.59.56 - An icon representing 'delivery.' The icon features a clean and modern design with a delivery truck at the center, symbolizing transport and shipping. .webp" alt="Delivery">
-                    <h3>Delivery</h3>
-                    <p>Delivering Excellence, On Time Every Time. Your Trusted Partner in Seamless Technology Solutions.QuickShip Deliveries, though recently launched, operates with a team of logistics experts who bring over 20 years of experience in streamlining supply chains, ensuring fast and reliable delivery services."
 
-                    </p>
-                </div>
-                <div class="item">
-                    <img src="images/DALL·E 2024-06-18 18.58.43 - An icon representing 'support.' The icon features a clean and modern design with a headset at the center, symbolizing customer support and assistance.webp" alt="Support">
-                    <h3>Support</h3>
-                    <p>Empowering Your Success with Unmatched Support. Our dedicated support team is available around the clock to ensure your operations never face downtime. customer support goes beyond troubleshooting to provide proactive consultations and strategic advice, ensuring your IT infrastructure not only performs but excels.</p>
-                </div>
+    <section class="section">
+        <h2>Explore</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="explore.png" alt="Explore">
+                <h3>Explore</h3>
+                <p>We embody the essential process of continuous learning and experimentation necessary to identify and solve problems...</p>
+            </div>
+            <div class="card">
+                <img src="engineer.png" alt="Engineer">
+                <h3>Engineer</h3>
+                <p>We are set apart by our passion for innovation and our unique blend of technical expertise, creative thinking...</p>
+            </div>
+            <div class="card">
+                <img src="excel.png" alt="Excel">
+                <h3>Excel</h3>
+                <p>Our foundation for building trust, establishing a competitive edge, and creating long-lasting relationships...</p>
             </div>
         </div>
-    </div>
-    
+    </section>
     <section class="section">
-        <div class="why-choose-us">
-            <h2>VALUES</h2>
-          </div>
-        <div class="container">
-            
-            <div class="block">
-                <img src="images/ethics.png" alt="Icon4">
-                <h2>Ethics</h2>
-                <p>Our commitment to ethical business practices and transparent communication forms the foundation of all our interactions; we are always doing what's right for our customers, partners, and society.</p>
+        <h2>Our Values</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="ethics.png" alt="Ethics">
+                <h3>Ethics</h3>
+                <p>Our commitment to ethical business practices and transparent communication forms the foundation of all our interactions...</p>
             </div>
-            <div class="block">
-                <img src="images/empathy.png" alt="Icon5">
-                <h2>Empathy</h2>
-                <p>At Experion, we prioritize putting ourselves in our clients' shoes to understand their needs and craft exceptional digital solutions that truly make a difference in their lives.</p>
+            <div class="card">
+                <img src="empathy.png" alt="Empathy">
+                <h3>Empathy</h3>
+                <p>At Experion, we prioritize putting ourselves in our clients' shoes to understand their needs and craft exceptional digital solutions...</p>
             </div>
-            <div class="block">
-                <img src="images/service.png" alt="Icon6">
-                <h2>Excellence</h2>
-                <p>Continuously striving for excellence in all that we do, from delivering high-quality solutions to fostering a positive work environment and achieving the highest standards of quality, innovation, and customer satisfaction, is at the heart of Experion's DNA.</p>
+            <div class="card">
+                <img src="Excellence.png" alt="Excellence">
+                <h3>Excellence</h3>
+                <p>Continuously striving for excellence in all that we do, from delivering high-quality solutions to fostering a positive work environment...</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="services">
+        <h2>What We Do</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <img src="strategy.png" alt="Strategy & Consulting">
+                <h3>Strategy & Consulting</h3>
+                <p>Leverage our expertise in technology and business for expert guidance on the product development journey, from ideation to market launch, by optimizing product design, development, and deployment.</p>
+            </div>
+            <div class="service-card">
+                <img src="dev.png" alt="DevSecOps">
+                <h3>DevSecOps</h3>
+                <p>Powered by our expertise in Cloud Engineering, DevSecOps enables rapid and agile software delivery while ensuring the security and compliance of the entire process.</p>
+            </div>
+            <div class="service-card">
+                <img src="platform.png" alt="Platform Engineering">
+                <h3>Platform Engineering</h3>
+                <p>Comprehensive platform engineering services to design, develop, and maintain robust and scalable platforms to serve as an integrated and secure infrastructure for orchestrating various products.</p>
+            </div>
+            <div class="service-card">
+                <img src="exdesign.png" alt="Experience Design">
+                <h3>Experience Design</h3>
+                <p>Human-centered UI/UX services that create compelling product experiences through empathy, innovation, and a deep understanding of customer needs.</p>
+            </div>
+            <div class="service-card">
+                <img src="application.png" alt="Application Modernization">
+                <h3>Application Modernization</h3>
+                <p>Leverage cutting-edge technology to transform legacy systems into future-ready, user-centric digital solutions that drive business growth and success.</p>
+            </div>
+            <div class="service-card">
+                <img src="engineering.png" alt="Emerging Tech">
+                <h3>Emerging Tech</h3>
+                <p>Integrating blockchain, IoT, cloud computing, and AR/VR technology to create cutting-edge solutions that drive digital transformation and provide a sustainable competitive advantage for our clients.</p>
+            </div>
+            <div class="service-card">
+                <img src="data.png" alt="Data & AI">
+                <h3>Data & AI</h3>
+                <p>Harness the power of data and artificial intelligence to drive digital transformation, deliver actionable insights, and create intelligent and automated solutions for our clients.</p>
+            </div>
+            <div class="service-card">
+                <img src="software.png" alt="Software Development">
+                <h3>Software Development</h3>
+                <p>End-to-end software development services that transform ideas into cutting-edge, user-centric digital solutions that drive business success.</p>
             </div>
         </div>
     </section>
@@ -243,7 +427,7 @@
     <footer>
         <div class="container">
             <div class="sec aboutus">
-                <img src="images/logo.png"alt="logo">
+                <img src="biglogo.png"alt="logo">
                 
                 <p>Vyakurute is a code school exclusively focused on solving entry level tech hiring for high growth ventures. We were founded in June 2018. We are on a mission to make 100K great entry level software engineers.</p>
                 <ul class="sci">
@@ -257,9 +441,10 @@
                 <h2>Quick Links</h2>
                 <ul>
                     <li><a href="">HOME</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Contact US</a></li>
+                    <li><a href="">About US</a></li>
+                    <li><a href="">Product Engineering</a></li>
+                    <li><a href="">Career</a></li>
+                    <li><a href="">Contact Us</a></li>
                 </ul>
             </div>
             <div class="contact">
@@ -289,5 +474,31 @@
         <p>copyright &#169 2024 Sugaam. All Rights Reserved</p>
     </div>
 </body>
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.banner-slide');
+    const totalSlides = slides.length;
+    const prevArrow = document.querySelector('.arrow.left');
+    const nextArrow = document.querySelector('.arrow.right');
+
+    function showSlide(index) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (index + totalSlides) % totalSlides;
+        slides[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentSlide - 1);
+    }
+
+    nextArrow.addEventListener('click', nextSlide);
+    prevArrow.addEventListener('click', prevSlide);
+
+    setInterval(nextSlide, 4000); // Auto-slide every 4 seconds
+</script>
 
 </html>

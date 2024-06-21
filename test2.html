@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experion Technologies</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #FFC0CB; /* Pink */
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        
+        .section {
+            padding: 50px 20px;
+        }
+        .section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #000080; /* Dark Blue */
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .card {
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+        }
+        .footer {
+            background-color: #000080; /* Dark Blue */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .services {
+            padding: 50px 20px;
+        }
+        .services h2 {
+            text-align: center;
+            color: #000080; /* Dark Blue */
+            margin-bottom: 30px;
+        }
+        .service-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .service-card {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s, border 0.3s;
+            border: 2px solid transparent; /* Initial transparent border */
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            border: 2px solid #d8649b; /* Pink border on hover */
+        }
+        .service-card img {
+            max-width: 50px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .service-card h3 {
+            color: #000080; /* Dark Blue */
+            margin-bottom: 10px;
+        }
+        .service-card p {
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            .services {
+                padding: 40px 50px;
+            }
+            .services h2 {
+                font-size: 1.8rem;
+            }
+            .service-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 428px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+            header nav a {
+                margin: 0 5px;
+            }
+            .services {
+                padding: 20px 20px;
+            }
+            .services h2 {
+                font-size: 1.5rem;
+            }
+            .service-card {
+                padding: 15px;
+            }
+            .service-card h3 {
+                font-size: 1.2rem;
+            }
+            .service-card p {
+                font-size: 0.9rem;
+            }
+        }
+        @media (max-width: 1920px) {
+            .services {
+                padding: 50px 100px;
+            }
+        }
+        .banner-container {
+            position: relative;
+            width: 100%;
+            max-width: 1920px;
+            margin: auto;
+            overflow: hidden;
+        }
+        .banner-slide {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+        .banner-slide.active {
+            display: block;
+            animation: pixelate 1s forwards;
+        }
+        .banner-button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: #d8649b;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 2;
+            opacity: 0;
+            animation: fadeIn 1s forwards 1s;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .arrow.left {
+            left: 10px;
+        }
+        .arrow.right {
+            right: 10px;
+        }
+        @keyframes pixelate {
+            0% {
+                filter: blur(0);
+            }
+            100% {
+                filter: blur(30px);
+                opacity: 0;
+            }
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        @media (max-width: 768px) {
+            .banner-button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+            .arrow {
+                font-size: 1.5rem;
+                padding: 8px;
+            }
+        }
+        @media (max-width: 428px) {
+            .banner-button {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+            .arrow {
+                font-size: 1.2rem;
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Experion Technologies</h1>
+        </div>
+        <nav>
+            <a href="#product-engineering">Product Engineering</a>
+            <a href="#digital-transformation">Digital Transformation</a>
+            <a href="#industries">Industries</a>
+            <a href="#insights">Insights</a>
+            <a href="#about-us">About Us</a>
+            <a href="#careers">Careers</a>
+            <a href="#contact-us">Contact Us</a>
+        </nav>
+    </header>
+    
+    <div class="banner-container">
+        <div class="banner-slide active" style="background-image: url('images/DALL·E\ 2024-06-18\ 18.41.06\ -\ A\ vibrant\ and\ dynamic\ scene\ depicting\ software\ product\ development.\ The\ image\ includes\ a\ diverse\ team\ of\ developers\ collaborating\ in\ a\ modern\ office\ e.webp');">
+            <button class="banner-button">Know More</button>
+        </div>
+        <div class="banner-slide" style="background-image: url('images/DALL·E\ 2024-06-18\ 18.41.54\ -\ A\ futuristic\ and\ vibrant\ scene\ showcasing\ artificial\ intelligence.\ The\ image\ features\ a\ sleek\,\ high-tech\ lab\ with\ advanced\ computers\,\ holographic\ disp.webp');">
+            <button class="banner-button">Know More</button>
+        </div>
+        <div class="banner-slide" style="background-image: url('images/DALL·E\ 2024-06-18\ 18.42.50\ -\ A\ detailed\ and\ vibrant\ scene\ depicting\ data\ engineering.\ The\ image\ features\ a\ modern\ office\ environment\ with\ a\ team\ of\ engineers\ working\ on\ various\ da.webp');">
+            <button class="banner-button">Know More</button>
+        </div>
+        <div class="banner-slide" style="background-image: url('images/DALL·E\ 2024-06-18\ 18.43.31\ -\ A\ vibrant\ and\ modern\ scene\ depicting\ cloud\ application\ development.\ The\ image\ features\ a\ team\ of\ developers\ working\ in\ a\ contemporary\ office\ with\ larg.webp');">
+            <button class="banner-button">Know More</button>
+        </div>
+        <div class="banner-slide" style="background-image: url('images/DALL·E\ 2024-06-18\ 18.44.17\ -\ A\ detailed\ and\ vibrant\ scene\ depicting\ automation\ testing\ in\ software\ development.\ The\ image\ features\ a\ team\ of\ testers\ and\ developers\ working\ in\ a\ mo.webp');">
+            <button class="banner-button">Know More</button>
+        </div>
+        <div class="banner-slide" style="background-image: url('images/DALL·E\ 2024-06-18\ 18.46.25\ -\ A\ detailed\ and\ vibrant\ scene\ depicting\ maintenance\ support\ in\ an\ IT\ environment.\ The\ image\ features\ a\ team\ of\ IT\ professionals\ working\ in\ a\ modern\ off.webp');">
+            <button class="banner-button">Know More</button>
+        </div>
+        <span class="arrow left">&#10094;</span>
+        <span class="arrow right">&#10095;</span>
+    </div>
+
+    <section class="section">
+        <h2>Explore</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="explore-icon.png" alt="Explore">
+                <h3>Explore</h3>
+                <p>We embody the essential process of continuous learning and experimentation necessary to identify and solve problems...</p>
+            </div>
+            <div class="card">
+                <img src="engineer-icon.png" alt="Engineer">
+                <h3>Engineer</h3>
+                <p>We are set apart by our passion for innovation and our unique blend of technical expertise, creative thinking...</p>
+            </div>
+            <div class="card">
+                <img src="excel-icon.png" alt="Excel">
+                <h3>Excel</h3>
+                <p>Our foundation for building trust, establishing a competitive edge, and creating long-lasting relationships...</p>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <h2>Our Values</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="ethics-icon.png" alt="Ethics">
+                <h3>Ethics</h3>
+                <p>Our commitment to ethical business practices and transparent communication forms the foundation of all our interactions...</p>
+            </div>
+            <div class="card">
+                <img src="empathy-icon.png" alt="Empathy">
+                <h3>Empathy</h3>
+                <p>At Experion, we prioritize putting ourselves in our clients' shoes to understand their needs and craft exceptional digital solutions...</p>
+            </div>
+            <div class="card">
+                <img src="excellence-icon.png" alt="Excellence">
+                <h3>Excellence</h3>
+                <p>Continuously striving for excellence in all that we do, from delivering high-quality solutions to fostering a positive work environment...</p>
+            </div>
+        </div>
+    </section>
+    <section class="services">
+        <h2>What We Do</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <img src="strategy-icon.png" alt="Strategy & Consulting">
+                <h3>Strategy & Consulting</h3>
+                <p>Leverage our expertise in technology and business for expert guidance on the product development journey, from ideation to market launch, by optimizing product design, development, and deployment.</p>
+            </div>
+            <div class="service-card">
+                <img src="devsecops-icon.png" alt="DevSecOps">
+                <h3>DevSecOps</h3>
+                <p>Powered by our expertise in Cloud Engineering, DevSecOps enables rapid and agile software delivery while ensuring the security and compliance of the entire process.</p>
+            </div>
+            <div class="service-card">
+                <img src="platform-icon.png" alt="Platform Engineering">
+                <h3>Platform Engineering</h3>
+                <p>Comprehensive platform engineering services to design, develop, and maintain robust and scalable platforms to serve as an integrated and secure infrastructure for orchestrating various products.</p>
+            </div>
+            <div class="service-card">
+                <img src="experience-icon.png" alt="Experience Design">
+                <h3>Experience Design</h3>
+                <p>Human-centered UI/UX services that create compelling product experiences through empathy, innovation, and a deep understanding of customer needs.</p>
+            </div>
+            <div class="service-card">
+                <img src="modernization-icon.png" alt="Application Modernization">
+                <h3>Application Modernization</h3>
+                <p>Leverage cutting-edge technology to transform legacy systems into future-ready, user-centric digital solutions that drive business growth and success.</p>
+            </div>
+            <div class="service-card">
+                <img src="emerging-icon.png" alt="Emerging Tech">
+                <h3>Emerging Tech</h3>
+                <p>Integrating blockchain, IoT, cloud computing, and AR/VR technology to create cutting-edge solutions that drive digital transformation and provide a sustainable competitive advantage for our clients.</p>
+            </div>
+            <div class="service-card">
+                <img src="data-ai-icon.png" alt="Data & AI">
+                <h3>Data & AI</h3>
+                <p>Harness the power of data and artificial intelligence to drive digital transformation, deliver actionable insights, and create intelligent and automated solutions for our clients.</p>
+            </div>
+            <div class="service-card">
+                <img src="software-icon.png" alt="Software Development">
+                <h3>Software Development</h3>
+                <p>End-to-end software development services that transform ideas into cutting-edge, user-centric digital solutions that drive business success.</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        &copy; 2024 Experion Technologies. All rights reserved.
+    </footer>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.banner-slide');
+        const totalSlides = slides.length;
+        const prevArrow = document.querySelector('.arrow.left');
+        const nextArrow = document.querySelector('.arrow.right');
+
+        function showSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (index + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        nextArrow.addEventListener('click', nextSlide);
+        prevArrow.addEventListener('click', prevSlide);
+
+        setInterval(nextSlide, 5000); // Auto-slide every 5 seconds
+    </script>
+</body>
+</html>

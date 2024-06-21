@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixelate Transition Example</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .banner-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .banner-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: opacity 1s;
+        }
+        .banner-slide.hidden {
+            opacity: 0;
+        }
+        .banner-button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: #d8649b;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 2;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .arrow.left {
+            left: 10px;
+        }
+        .arrow.right {
+            right: 10px;
+        }
+        .tile {
+            position: absolute;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.5s, opacity 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner-container">
+        <div class="banner-slide" style="background-image: url('images/DALL·E\ 2024-06-18\ 18.41.54\ -\ A\ futuristic\ and\ vibrant\ scene\ showcasing\ artificial\ intelligence.\ The\ image\ features\ a\ sleek\,\ high-tech\ lab\ with\ advanced\ computers\,\ holographic\ disp.webp');"></div>
+        <div class="banner-slide hidden" style="background-image: url('images/DALL·E\ 2024-06-18\ 18.44.17\ -\ A\ detailed\ and\ vibrant\ scene\ depicting\ automation\ testing\ in\ software\ development.\ The\ image\ features\ a\ team\ of\ testers\ and\ developers\ working\ in\ a\ mo.webp');"></div>
+        <div class="banner-slide hidden" style="background-image: url('images/DALL·E\ 2024-06-18\ 18.41.06\ -\ A\ vibrant\ and\ dynamic\ scene\ depicting\ software\ product\ development.\ The\ image\ includes\ a\ diverse\ team\ of\ developers\ collaborating\ in\ a\ modern\ office\ e.webp');"></div>
+        <button class="banner-button">Know More</button>
+        <span class="arrow left">&#10094;</span>
+        <span class="arrow right">&#10095;</span>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.banner-slide');
+        const totalSlides = slides.length;
+        const prevArrow = document.querySelector('.arrow.left');
+        const nextArrow = document.querySelector('.arrow.right');
+        const bannerContainer = document.querySelector('.banner-container');
+        const tileCount = 20;
+
+        function createTiles() {
+            const tileSize = bannerContainer.clientWidth / tileCount;
+            for (let i = 0; i < tileCount; i++) {
+                for (let j = 0; j < tileCount; j++) {
+                    const tile = document.createElement('div');
+                    tile.classList.add('tile');
+                    tile.style.width = `${tileSize}px`;
+                    tile.style.height = `${tileSize}px`;
+                    tile.style.left = `${j * tileSize}px`;
+                    tile.style.top = `${i * tileSize}px`;
+                    tile.style.backgroundImage = slides[currentSlide].style.backgroundImage;
+                    tile.style.transitionDelay = `${(i + j) * 50}ms`;
+                    tile.style.transform = 'scale(0)';
+                    bannerContainer.appendChild(tile);
+
+                    setTimeout(() => {
+                        tile.style.transform = 'scale(1)';
+                    }, 100);
+                }
+            }
+        }
+
+        function removeTiles() {
+            const tiles = document.querySelectorAll('.tile');
+            tiles.forEach(tile => {
+                tile.style.transform = 'scale(0)';
+                tile.style.opacity = '0';
+                setTimeout(() => {
+                    tile.remove();
+                }, 500);
+            });
+        }
+
+        function showSlide(index) {
+            slides[currentSlide].classList.add('hidden');
+            removeTiles();
+            currentSlide = (index + totalSlides) % totalSlides;
+            slides[currentSlide].classList.remove('hidden');
+            createTiles();
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        nextArrow.addEventListener('click', nextSlide);
+        prevArrow.addEventListener('click', prevSlide);
+
+        setInterval(nextSlide, 5000); // Auto-slide every 5 seconds
+
+        // Initialize the first set of tiles
+        createTiles();
+    </script>
+</body>
+</html>
+
+
