@@ -1,149 +1,60 @@
-body {
-    font-family: Arial, sans-serif;
+body, html {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
-footer {
-    background-color: #e91e63;
-    color: white;
-    padding: 40px 20px;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.support-section {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.support-section h2 {
-    font-size: 24px;
-}
-
-.support-section h2 span {
-    color: #673ab7;
-}
-
-.support-section p {
-    margin: 10px 0;
-}
-
-.subscribe-form {
+.about-us {
+    position: relative;
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-}
-
-.subscribe-form input {
-    padding: 10px;
-    border: none;
-    border-radius: 5px 0 0 5px;
-    width: 250px;
-}
-
-.subscribe-form button {
-    padding: 10px;
-    border: none;
-    background-color: #673ab7;
-    color: white;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-}
-
-.footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.footer-content > div {
-    flex: 1;
-    min-width: 250px;
-    margin: 10px;
-}
-
-.about-us h3,
-.quick-links h3,
-.reach-us h3 {
-    margin-top: 0;
-}
-
-.about-us p,
-.quick-links ul,
-.reach-us p {
-    margin: 5px 0;
-}
-
-.quick-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.quick-links ul li {
-    margin: 5px 0;
-}
-
-.quick-links ul li a,
-.reach-us a {
-    color: white;
-    text-decoration: none;
-}
-
-.opening-hours {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.opening-hours .icon {
-    margin-right: 10px;
-}
-
-.social-links {
     text-align: center;
-    margin: 20px 0;
+    color: white;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #bc005b, #4528a5), url('1ban.png') no-repeat center center/cover;
+    background-size: cover;
 }
 
-.social-links a {
-    margin: 0 5px;
-    display: inline-block;
+.about-content {
+    max-width: 800px;
+    z-index: 2;
 }
 
-.social-links a img {
-    width: 24px;
-    height: 24px;
+.about-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
-.footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
+.about-content p {
+    font-size: 1.2em;
+    line-height: 1.5;
 }
 
-/* Responsive Styles */
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
+    .about-us {
+        text-align: left;
+    }
+    
+    .about-content h2 {
+        order: 1;
+        font-size: 2em;
+    }
+    
+    .about-content p {
+        order: 2;
+        font-size: 1em;
     }
 }
 
-@media (max-width: 480px) {
-    .subscribe-form {
-        flex-direction: column;
+@media (max-width: 428px) {
+    .about-content h2 {
+        font-size: 1.5em;
     }
-
-    .subscribe-form input,
-    .subscribe-form button {
-        width: 100%;
-        border-radius: 5px;
-    }
-
-    .subscribe-form button {
-        margin-top: 10px;
+    
+    .about-content p {
+        font-size: 0.9em;
     }
 }

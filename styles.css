@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    padding-top: 80px; /* Added padding-top to avoid content being hidden behind the navbar */
+     /* Added padding-top to avoid content being hidden behind the navbar */
 }
 
 .container {
@@ -77,10 +77,11 @@ body {
 }
 
 nav {
-    background: #A051A2;
+    background-color: rgba(255, 255, 255, 0); 
+    opacity: 0.8;
     height: 80px;
     width: 100%;
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     z-index: 1000; /* Ensures navbar stays on top */
@@ -89,7 +90,7 @@ nav {
 label.logo {
     position: absolute;
     top: 50%;
-    left: 15%;
+    left: 5%;
     transform: translate(-50%, -50%);
     width: 150px; /* Adjust the width as needed */
     height: auto;
@@ -186,7 +187,7 @@ a.active, a:hover {
 }
 
 .banner {
-    background-color: #f5f5f5;
+    background-color: #f5f5f55d;
     padding: 20px;
 }
 
@@ -501,7 +502,7 @@ footer {
     width: 100%;
     height: auto;
     padding: 50px 100px;
-    background: #A051A2;
+    background: linear-gradient(to right, #bc005b, #4528a5);
     z-index: 1; /* Added z-index to ensure footer is below the navbar */
 }
 
@@ -592,7 +593,7 @@ footer .container .contact .info li a {
 
 .copyrighttext {
     width: 100%;
-    background: #A051A2;
+    background: linear-gradient(to right, #bc005b, #4528a5);
     padding: 20px 100px 30px;
     text-align: center;
     color: #fff;
@@ -645,12 +646,40 @@ body {
     justify-content: center;
     gap: 20px;
 }
+.explore-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    
+    z-index: 1000;
+    position: relative;
+    margin-top: -150px;
+    left: 0%;
 
+}
+.explore-cards .card {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 50px;
+    text-align: center;
+    transition: none; /* Remove transition */
+}
+
+.explore-cards .card:hover {
+    transform: none; /* Remove transform effect */
+}
+
+.explore-cards .card img {
+    max-width: 100%;
+    height: auto;
+}
 .card {
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
-    padding: 20px;
+    padding: 50px;
     text-align: center;
     transition: transform 0.3s;
 }
@@ -714,6 +743,15 @@ body {
         flex-direction: column;
         align-items: center;
     }
+    .explore-cards{
+        flex-direction: column;
+        align-items: center;        
+    }
+    .explore-cards {
+        position: static;
+        transform: none;
+        margin-top: 20px;
+    }
     .services {
         padding: 40px 20px; /* Adjusted padding for medium screens */
     }
@@ -748,10 +786,15 @@ body {
 
 .banner-container {
     position: relative;
+    
     width: 100%;
     max-width: 1920px;
     overflow: hidden;
     height: 100vh; /* Ensure banner takes up full viewport height */
+    background-image:cover;
+    background-size: cover;
+    background-position: center;
+    display: flex;
 }
 
 .banner-slide {
@@ -761,27 +804,18 @@ body {
     height: 100%;
     background-size: cover;
     background-position: center;
+    background-image:linear-gradient(rgba(0,0,0,0.5)red,blue),url('banner1.jpg');
 }
 
 .banner-slide.active {
-    display: block;
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the start (left) */
+    padding-left: 20px; /* Adjust padding as needed */
 }
 
-.banner-button {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 20px;
-    background-color: #d8649b;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    z-index: 2;
-    opacity: 0;
-    animation: fadeIn 1s forwards 1s;
-}
+
 
 .arrow {
     position: absolute;
@@ -830,3 +864,127 @@ body {
         padding: 6px;
     }
 }
+.customer-speak {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+}
+
+.customer-speak h2 {
+    font-size: 2em;
+    color: #d8649b;
+}
+
+.customer-speak h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.testimonial-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.testimonial {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.testimonial.active {
+    display: flex;
+}
+
+.testimonial img {
+    width: 40%;
+    max-width: 400px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.testimonial-content {
+    width: 55%;
+}
+
+.testimonial-text {
+    font-size: 2.0em;
+    color: #333;
+    margin-bottom: 20px;
+}
+.testimonial-para{
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+.testimonial-author {
+    font-weight: bold;
+    color: #666;
+}
+
+.testimonial-controls {
+    margin-top: 20px;
+}
+
+.testimonial-controls button {
+    background-color: #d8649b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.testimonial-controls button:hover {
+    background-color: #a04870;
+}
+
+/* Media Queries */
+@media (max-width: 1920px) {
+    .testimonial-content {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .testimonial img {
+        width: 80%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .testimonial-content {
+        width: 100%;
+    }
+
+    .testimonial-text {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 428px) {
+    .testimonial img {
+        width: 100%;
+    }
+
+    .testimonial-text {
+        font-size: 0.9em;
+    }
+
+    .testimonial-controls button {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+}
+

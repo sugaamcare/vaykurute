@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vyakurute Demo</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style1.css">
     
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -28,12 +29,7 @@
     margin-bottom: 20px;
     color: black; /* Dark Blue */
 }
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
+
 .card {
     background-color: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -148,15 +144,16 @@
 }
 .banner-button {
     position: absolute;
-    bottom: 20px;
-    left: 50%;
+    top: 800px;
+    left: 10%;
     transform: translateX(-50%);
-    padding: 10px 20px;
-    background-color: #d8649b;
+    padding: 20px 30px;
+    background: linear-gradient(to right, #bc005b, #4528a5);
     color: white;
     border: none;
+    border-radius: 40px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
     z-index: 2;
     opacity: 0;
     animation: fadeIn 1s forwards 1s;
@@ -205,7 +202,11 @@
 }
 </style>
 <body>
-    <!-- navbar -->
+    
+      
+      <div class="banner-container">
+        <!-- navbar -->
+        
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
@@ -225,25 +226,24 @@
           
         </ul>
       </nav>
+    
       <!-- navbar ends -->
-      
-      <div class="banner-container">
-        <div class="banner-slide active" style="background-image: url('banner1.jpg');">
+        <div class="banner-slide active" style="background-image: url('2ban.png');">
             <button class="banner-button">Know More</button>
         </div>
-        <div class="banner-slide" style="background-image: url('banner2.jpg');">
+        <div class="banner-slide" style="background-image: url('3ban.png');">
             <button class="banner-button">Know More</button>
         </div>
-        <div class="banner-slide" style="background-image: url('banner3.jpg');">
+        <div class="banner-slide" style="background-image: url('4ban.png');">
             <button class="banner-button">Know More</button>
         </div>
-        <div class="banner-slide" style="background-image: url('banner4.jpg');">
+        <div class="banner-slide" style="background-image: url('7ban.png');">
             <button class="banner-button">Know More</button>
         </div>
-        <div class="banner-slide" style="background-image: url('images/DALL·E 2024-06-18 18.44.17 - A detailed and vibrant scene depicting automation testing in software development. The image features a team of testers and developers working in a mo.webp');">
+        <div class="banner-slide" style="background-image: url('5ban.png');">
             <button class="banner-button">Know More</button>
         </div>
-        <div class="banner-slide" style="background-image: url('banner2.jpg');">
+        <div class="banner-slide" style="background-image: url('6ban.png');">
             <button class="banner-button">Know More</button>
         </div>
         <span class="arrow left">&#10094;</span>
@@ -251,8 +251,8 @@
     </div>
 
     <section class="section">
-        <h2>Explore</h2>
-        <div class="cards">
+        
+        <div class="explore-cards">
             <div class="card">
                 <img src="explore.png" alt="Explore">
                 <h3>Explore</h3>
@@ -268,6 +268,12 @@
                 <h3>Excel</h3>
                 <p>Our foundation for building trust, establishing a competitive edge, and creating long-lasting relationships...</p>
             </div>
+        </div>
+    </section>
+    <section class="about-us">
+        <div class="about-content">
+            <h2>Who We Are</h2>
+            <p>We fuse our passion for everything artistic and beautiful in the world with our expertise and skills in the latest technology. The result is a winning combination – an ensemble of individuals whose zeal to see your business succeed can only be rivaled by your own. Our dedicated team strives to deliver innovative solutions tailored to your needs. Join us on a journey to excellence and success.</p>
         </div>
     </section>
     <section class="section">
@@ -424,6 +430,52 @@
             });
         });
     </script> -->
+    <section class="customer-speak">
+        <h2>Customer Speak</h2>
+        <h3>Hear From Our Clients</h3>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <img src="images/bussiness-man.png" alt="Customer Image" class="testimonial-image">
+                <div class="testimonial-content">
+                    <p class="testimonial-text">"Our business is growing, and Experion's platform is at the heart of it"</p>
+                    <p class="testimonial-para">Experion was a solid company to work with in terms of project management. The enterprise system built by them is the core of our activity. I appreciated Experion's flexibility in working with us, as well as their ability to solve problems which proved too difficult for our accounts people. They have a very seasoned executive team.</p>
+                    <p class="testimonial-author">CEO, Market Research Company</p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <img src="images/businesswoman.png" alt="Customer Image" class="testimonial-image">
+                <div class="testimonial-content">
+                    <p class="testimonial-text">"Experion was a solid company to work with in terms of project management."</p>
+                    <p class="testimonial-para">Experion was a solid company to work with in terms of project management. The enterprise system built by them is the core of our activity. I appreciated Experion's flexibility in working with us, as well as their ability to solve problems which proved too difficult for our accounts people. They have a very seasoned executive team.</p>
+                    
+                    <p class="testimonial-author">Manager, IT Services</p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <img src="images/man (1).png" alt="Customer Image" class="testimonial-image">
+                <div class="testimonial-content">
+                    <p class="testimonial-text">"Experion was a solid company to work with in terms of project management."</p>
+                    <p class="testimonial-para">Experion was a solid company to work with in terms of project management. The enterprise system built by them is the core of our activity. I appreciated Experion's flexibility in working with us, as well as their ability to solve problems which proved too difficult for our accounts people. They have a very seasoned executive team.</p>
+                    
+                    <p class="testimonial-author">Manager, IT Services</p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <img src="images/man-avatar.png" alt="Customer Image" class="testimonial-image">
+                <div class="testimonial-content">
+                    <p class="testimonial-text">"Experion was a solid company to work with in terms of project management."</p>
+                    <p class="testimonial-para">Experion was a solid company to work with in terms of project management. The enterprise system built by them is the core of our activity. I appreciated Experion's flexibility in working with us, as well as their ability to solve problems which proved too difficult for our accounts people. They have a very seasoned executive team.</p>
+                    
+                    <p class="testimonial-author">Manager, IT Services</p>
+                </div>
+            </div>
+            <!-- Add more testimonials as needed -->
+        </div>
+        <div class="testimonial-controls">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
     <footer>
         <div class="container">
             <div class="sec aboutus">
@@ -499,6 +551,37 @@
     prevArrow.addEventListener('click', prevSlide);
 
     setInterval(nextSlide, 4000); // Auto-slide every 4 seconds
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    let currentTestimonialIndex = 0;
+    const testimonials = document.querySelectorAll('.testimonial');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+
+    function showTestimonial(index) {
+        testimonials.forEach((testimonial, i) => {
+            testimonial.classList.toggle('active', i === index);
+        });
+    }
+
+    function nextTestimonial() {
+        currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+        showTestimonial(currentTestimonialIndex);
+    }
+
+    function prevTestimonial() {
+        currentTestimonialIndex = (currentTestimonialIndex - 1 + testimonials.length) % testimonials.length;
+        showTestimonial(currentTestimonialIndex);
+    }
+
+    nextButton.addEventListener('click', nextTestimonial);
+    prevButton.addEventListener('click', prevTestimonial);
+
+    // Show the first testimonial by default
+    showTestimonial(currentTestimonialIndex);
+});
+
 </script>
 
 </html>
