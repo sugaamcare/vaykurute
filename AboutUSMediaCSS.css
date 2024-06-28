@@ -1,0 +1,368 @@
+@media (max-width: 1024px) {
+    #banner{
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}
+
+    @media (max-width: 768px) {
+        .card-body {
+            flex-direction: column;
+            align-items: center;
+        }
+
+    }     
+
+@media (max-width: 430px) {
+    #banner{
+        flex-direction: column;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    body {
+        width: 100%;
+
+    }
+
+    .card-para{
+        font-size: 15px;
+    }
+
+    .col-lg-12{
+        padding: 0;
+        margin: 0;
+    }
+}
+ /* nav */
+ 
+/* screen */
+
+@media (max-width: 768px) {
+    .page-title{
+        font-size:60px;
+    }
+    .ct-breadcrumb li{
+        font-size: 18px
+    }
+    .ct-breadcrumb{
+        margin-left: 0px;
+        padding-left: 5px;
+        /* margin-right: 20px;
+        padding-right: 40px; */
+    }
+    .page-title-inner{
+        justify-content: center;
+        padding-left:0px;
+        text-align: center;
+    }
+}
+    /* /* .div1{
+        /* grid-template-columns:1fr; */
+        /* width: 100%;
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+        justify-content: center ;
+        text-align: center;
+        margin-left: 50px;
+        margin-left: 20px;
+        position: absolute;
+        justify-content: space-around;
+    } */
+    /* .common-div{
+        grid-template-columns:1fr;
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+    }  */
+
+    /* @media (max-width: 428px){
+        .div1{
+            width: 100%;
+            height: 100%;
+            flex-wrap: wrap;
+            display: grid;
+            flex-direction: column;
+            text-align: left;
+            margin-left: 0;
+            grid-template-columns: 1fr;
+            /* padding: 10px; */
+        /* }
+    }  */
+    
+    /* .common-div{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        height: 100%;
+    }
+} */
+
+/* @media (max-width: 428px){
+    img{
+        width: 320px;
+        height: 430px;
+        padding: 0px 15px;
+    }
+/* }  */
+
+@media (max-width: 1920px){
+    .common-div{
+        width: 100%;
+        height: 950px;
+        overflow: hidden;
+    }
+
+}
+
+@media (max-width: 768px){
+        .common-div{
+            width: 100%;
+            height: 10vhx;
+            flex-direction: column;
+            align-items: center;
+            display: grid;
+            grid-template-columns: 1fr,1fr;
+            justify-content: center;
+        }
+
+        #id-div1{
+            
+        }
+}
+
+@media (max-width: 425px){
+    .common-div{
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        display: flex;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    img{
+        width: 330px;
+        height: 508px;
+        padding: 0px 30px;
+    }
+    
+}
+    
+
+
+   
+/* middle */
+
+@media (max-width: 428px) {
+    .page-title{
+        font-size: 30px;
+    }
+    .card-body p{
+        font-size: 16px;
+    }
+    .product{
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    } 
+
+   
+
+@media (max-width: 768px) {
+    .banner-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content {
+        max-width: 100%;
+        order: 2;
+    }
+   
+
+    .inner-div{
+        position: relative;
+        top: 90%;
+    }
+   
+
+    .inner-div h1{
+        text-align: center;
+    }
+
+    .para p{
+        text-align: center;
+    }
+
+    .row h1{
+        width: 100%;
+        text-align: center;
+       margin-left: 0;
+       padding-left: 0;
+    }
+
+    .card-para{
+        font-size: 40px;
+    }
+
+    .col-lg-4{
+        margin-top:10px;
+    }
+    .product{
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    } 
+}
+
+}
+
+@media (max-width: 428px){
+    .col-lg-4{
+        margin-top:10px;
+    }
+
+}
+
+@media (max-width: 428px){
+
+    .inner-div h1{
+        font-size: 25px;
+        line-height: 1.2;
+        justify-content: center;
+        padding: 5px;
+    }
+    .inner-div{
+        margin: 0px;
+        text-align: center;
+        /* padding-left: 20px; */
+        width: 100%;
+        padding: 5px;
+    }
+    .para{
+        width: 100%;
+        margin: 10px;
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .card-body p{
+        font-size: 14px;
+    }
+
+    .col-lg-4{
+        margin-top:10px;
+    }
+}
+
+@media (max-width: 768px) {
+  .banner-content {
+      flex-direction: column;
+      text-align: center;
+  }
+
+    img{
+        width: 630px;
+        height: 898px;
+        padding: 0px 30px;
+    }
+    
+
+    #id-div1{
+        width: 300px;
+        height: 900px;
+    }
+    #sec-para{
+        height: 500px;
+    }
+  
+}
+
+/* footer */
+
+@media (max-width: 991px) {
+    footer {
+        padding: 0;
+        margin: 0;
+        
+    }
+    footer .container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+    .copyrighttext {
+        padding: 20px 40px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    footer .container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+        text-align: left;
+    }
+/* 
+    .row h1{
+        width: 100%;
+        text-align: center;
+       margin-left: 20px;
+       padding-left: 20px;
+    } */
+
+    .quicklinks{
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .contact{
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+
+    footer{
+        padding: 0;
+        margin: 0;
+        margin-bottom: 0;
+    }
+
+    .sec-aboutus img{
+        padding:0;
+        /* margin-bottom: 60px; */
+        margin: 0px 80px 0px 0px;
+        padding-right: 50px;
+        width: 250px;
+        height: 25px;
+        position: relative;
+    
+    }
+    .sec-aboutus p{
+        font-size: 15px;
+        padding-right: 10px;
+    }
+    .sec-aboutus{
+        width: 100%;
+
+    }
+    .container p{
+      justify-content: center;
+      padding-right: 20px;
+    }
+    .footer .container .sci{
+        margin-right: 100px;
+    }
+    .copyrighttext{
+        border:none;
+        /* position: relative;
+        left: 3%; */
+    }
+}
+
