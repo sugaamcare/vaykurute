@@ -1,0 +1,418 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background:white;
+    color: #201e1e;
+    
+}
+#main{
+    width: 100%;
+    height: 100vh;
+
+    background-size: cover;
+    background-position: center;
+
+ 
+}
+
+
+/* --------------midle ------------------*/
+.midle{
+    padding-top: 7%;
+    display: flex;
+    justify-content: space-around;
+}
+.content{
+    padding-top: 5%;
+
+    width: 45%;
+}
+.content h1{
+font-size: 75px;
+font-family: 'Gilroy Bold', sans-serif;
+letter-spacing: -.02em;
+}
+.content p{
+    margin-top: 25px;
+   padding-left: 10px;
+   padding-top: 13px;
+   padding-bottom: 13px;
+    background-color: #DC143C;
+    font-size: 35px;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Gilroy Bold', sans-serif;
+width: 70%;
+    }
+   
+   
+    .text{
+        padding-left: 15px;
+    }
+    .photo img{
+   transform: scale(1.9s);
+    }
+    
+    .move-image {
+        display: block;
+        width: 200px; /* Adjust size as needed */
+        height: auto; /* Maintain aspect ratio */
+        transition: transform 0.9s ease-out; /* Smooth transition */
+        position: absolute;
+        top: 80%;
+        left: 80%;
+        transform: translate(-100%, 100%);
+      }
+      #image{
+        height: 95%;
+        width: 90%;
+      }
+      .information{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 4%;
+      
+        background-color: #F9FDFF;
+        margin-top: 5%;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      padding-bottom: 60px;
+      }
+      .imageinf img{
+        width: 100%;
+        opacity: 0; 
+       
+        transition: transform 1.6s ease-in-out;
+        transform: translateX(-100%);
+        left: -150px;
+      
+      }
+     
+
+      .imageinf{
+        width: 70%;
+        margin-left: 5%;
+        
+      }
+      .info{
+        width: 80%;
+     padding-top: 4%;
+        margin-left: 5%;
+        padding-right: 0px;
+      
+      }
+      .info h1{
+        color: #212529;
+        font-size: 40px;
+        width: 80%;
+      }
+      .info h3{
+        padding-top: 20px;
+        color: #212529;
+        font-size: 22px;
+        width: 85%;
+        
+        }
+      .paragraph{
+        margin-top: 2%;
+        width: 70%;
+        padding-left: 5px;
+        line-height: 25px;
+        color: #212529;
+        display: flex;
+      }
+      .paragraph p{
+        padding-left: 20px;
+      }
+      .line{
+        height: 50%px;
+        width: 1px;
+        background-color:#CEEFFF;
+      }
+      @media (max-width: 1024px) {
+
+        .midle{
+          margin-top: 10%;
+        }
+        .content h1{
+          font-size: 50px;
+          font-family: 'Gilroy Bold', sans-serif;
+          letter-spacing: -.02em;
+          margin-left: 10px;
+          }
+          .content p{
+            margin-left: 10px;
+            font-size: 35px;
+            width: 90%;
+          }
+          
+          .imageinf img{
+           margin-left: -5%;
+          
+          }
+    }
+
+      .service{
+        margin-top: 8%;
+        width: 100%;
+        padding-left:30%;
+        padding-bottom: 7%;
+      }
+      .service span{
+        font-size: 20px;
+        font-family: inherit;
+        letter-spacing: .2em;
+        margin-bottom: 21px;
+      }
+      .service h1{
+        padding-left: 19%;
+        padding-top: 20px;
+        font-size: 40px;
+      }
+
+      @media (max-width: 768px) {
+        .service h1{
+          padding-left: 19%;
+          padding-top: 20px;
+          font-size: 40px;
+        }
+      }
+     
+/*-------------------Carosal start--------------------- */
+      .slide-container{
+        max-width: 1120px;
+        width: 100%;
+        height: 70%;
+   
+   
+      }
+      @media (max-width: 768px) {
+        .slide-container{
+       
+          height: 55%;
+        }
+      }
+      .slide-content{
+        margin: 0 40px;
+        overflow: hidden;
+        /* border-radius: 25px; */
+      }
+    
+      .card-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 14px;
+      
+      }
+      /* .image-content{
+        position: relative;
+        row-gap: 5px;
+        padding: 25px 0;
+      } */
+
+.card_img img{
+  margin-left:10px;
+  height: 100%;
+  width: 95%;
+border-radius: 5px;
+margin-top: 5px;
+
+
+}
+
+.circle{
+  position: absolute;
+  height: 100px;
+  width: 100px;
+ 
+  left: 37%;
+  top: 55px;
+  border-radius: 50%;
+  border: 1px solid red;
+  background-color: white;
+}
+.circle img{
+  border-radius: 55%;
+  margin-top: 8px;
+  margin-left: 9px;
+  position: relative;
+  width: 80px; /* Adjust size as needed */
+  height: 80px; /* Adjust size as needed */
+  overflow: hidden;
+
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+.card{
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+     .card:hover{
+      background-color: #ceefff5b;
+      transform: translateY(10px);
+     }
+     .card:hover .circle img{
+      transform: translateY(-10px);
+      opacity: 0;
+     }
+    
+    
+      
+      .card-image{
+        position: relative;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        background: #FFF;
+        padding: 3px;
+      }
+    
+      .name{
+        font-size: 28px;
+        font-weight: 10;
+        color: #333;
+        font-family: 'Gilroy Bold', sans-serif;
+        letter-spacing: -.02em;
+     
+      }
+      .description{
+        font-size: 18px;
+        color: #707070;
+        text-align: center;
+        margin-top: 10px;
+        line-height: 24px;
+      }
+   
+      
+      .swiper-navBtn{
+        color: #6E93f7;
+        transition: color 0.3s ease;
+      }
+      .swiper-navBtn:hover{
+        color: #4070F4;
+      }
+      .swiper-navBtn::before,
+      .swiper-navBtn::after{
+        font-size: 35px;
+      }
+      .swiper-button-next{
+        right: 0;
+      }
+      .swiper-button-prev{
+        left: 0;
+      }
+      .swiper-pagination-bullet{
+        background-color: #6E93f7;
+        opacity: 1;
+      }
+      .swiper-pagination-bullet-active{
+        background-color: #4070F4;
+      }
+      /*-------------------Carosal end--------------------- */
+      
+
+    
+      @media (max-width: 768px) {
+        .content{
+            width: 100%;
+
+        }
+        .midle{
+            display: list-item;
+        }
+        .content p{
+            font-size: 40px;
+            width: 95%;
+            margin-left: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+          
+
+        }
+        .content h1{
+            margin-left: 10px;
+            font-size: 40px;
+            font-family: 'Gilroy Bold', sans-serif;
+            letter-spacing: -.02em;
+            }
+            .photo{
+                width: 100%;
+               margin-left: 20px;
+                margin-top: 100px;
+            }
+           
+            .information{
+                display: list-item;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      
+            }
+            .imageinf{
+                width: 100%;
+                padding-left: 5%;
+                margin-top: 20%;
+            }
+            .info{
+                width: 100%;
+                padding-top: 4%;
+        
+            }
+            .info h1{
+                color: #212529;
+                font-size: 35px;
+                width: 100%;
+                padding-top: 30px;
+              }
+              .info h3{
+                color: #212529;
+                font-size: 24px;
+                width: 95%;
+                padding-top: 30px;
+              }
+              .paragraph p{
+                padding-left: 20px;
+                width: 95%;
+              }
+              .paragraph{
+                margin-top: 5%;
+                width: 100%;
+                padding-left: 5px;
+                line-height: 30px;
+                color: #212529;
+                display: flex;
+              }
+              .service{
+                margin-top: 8%;
+                width: 100%;
+                padding-left:20%;
+           
+                padding-bottom: 10%;
+              }
+              .service span{
+                text-align: end;
+                width: 100%;
+              }
+              .service h1{
+                padding-left: 5%;
+                padding-top: 20px;
+                font-size: 40px;
+              }
+
+/*-------------------Carosal--------------------- */
+
+              .slide-content{
+                margin: 0 10px;
+                margin-left: 20px;
+                margin-bottom: -100%;
+
+              }
+              .swiper-navBtn{
+                display: none;
+              }
+
+    }

@@ -1,0 +1,195 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* padding-top: 80px; Added padding-top to avoid content being hidden behind the navbar */
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    text-align: center;
+}
+
+.section {
+    padding: 40px 0;
+}
+
+.testimonial {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.testimonial img {
+    width: 200px;
+    height: auto;
+    margin: 20px;
+}
+
+.testimonial-text {
+    max-width: 600px;
+    margin: 20px;
+}
+
+.testimonial-text p {
+    margin: 10px 0;
+}
+
+.testimonial-text .author {
+    font-weight: bold;
+    color: #333;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 430px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .testimonial-text, .testimonial img {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: montserrat;
+}
+
+nav {
+    /* background: #a151a2fa; */
+    
+    height: 80px;
+    width: 100%;
+   position:absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures navbar stays on top */
+}
+@media (max-width: 768px) {
+ nav{
+    width: 105%;
+    position:absolute;
+ }
+ 
+  }
+
+.banner-img {
+    position: absolute;
+    top: 45%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    width: 30%; /* Adjust the width as needed */
+    height: auto;
+    z-index: 10;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: rgb(157, 152, 152);
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+ nav a:hover {
+  
+    color: #DC143C;
+    transition: .5s;
+}
+
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 952px) {
+    
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+@media (max-width: 768px) {
+   
+    .banner-img{
+        padding-top: 10px;
+        padding-left: 90px;
+        width: 75%;
+    }
+ 
+  }
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        flex-direction: column;
+        justify-content: center;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    /* a:hover, a.active {
+        background: none;
+        color: #0082e6;
+    } */
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
