@@ -580,6 +580,7 @@ footer .container .quicklinks ul li a {
     text-decoration: none;
     margin-bottom: 10px;
     display: inline-block;
+    font-size: medium;
 }
 
 footer .container .contact .info {
@@ -842,7 +843,7 @@ body {
 .banner-content {
     position: absolute;
     left: 100px;
-    top: 50%;
+    
     transform: translateY(-50%);
     
     z-index: 2;
@@ -891,6 +892,9 @@ body {
     }
 }
 @media (max-width: 1920px){
+    .banner-content{
+        top: 50%;
+    }
     .banner-content h1 {
         font-size: 100px;
     }
@@ -898,12 +902,18 @@ body {
         font-size: 30px;
         
     }
+    .banner-button{
+        bottom: 20%;
+    left: 15%;
+    }
 }
 
 @media (max-width: 768px) {
     .banner-button {
         font-size: 14px;
         padding: 8px 16px;
+        bottom: 45%;
+        left: 20%;
     }
     .arrow {
         font-size: 1.5rem;
@@ -911,9 +921,10 @@ body {
     }
     .banner-content {
         left: 10px;
+        top: 35%;
     }
     .banner-content h1 {
-        font-size: 1.8em;
+        font-size: 40px;
     }
     .banner-content p {
         font-size: 1em;
@@ -921,16 +932,21 @@ body {
 }
 
 @media (max-width: 428px) {
+    .banner-content{
+        top: 35%;
+    }
     .banner-button {
         font-size: 12px;
         padding: 6px 12px;
+        bottom: 50%;
+        left: 25%;
     }
     .arrow {
         font-size: 1.2rem;
         padding: 6px;
     }
     .banner-content h1 {
-        font-size: 2em;
+        font-size: 30px;
     }
     .banner-content p {
         font-size: 0.9em;
@@ -956,7 +972,7 @@ body {
 
 .testimonial-container {
     position: relative;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -1021,7 +1037,7 @@ body {
 /* Media Queries */
 @media (max-width: 1920px) {
     .testimonial-content {
-        width: 60%;
+        width: 50%;
     }
 }
 
@@ -1044,6 +1060,11 @@ body {
     .testimonial-text {
         font-size: 1em;
     }
+    .testimonial-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @media (max-width: 428px) {
@@ -1058,6 +1079,11 @@ body {
     .testimonial-controls button {
         font-size: 1em;
         padding: 8px 16px;
+    }
+    .testimonial-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 .floating_btn {
