@@ -1,9 +1,11 @@
+@import url('https://fonts.cdnfonts.com/css/neusharp');
+@import url('https://fonts.cdnfonts.com/css/galette');
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-     /* Added padding-top to avoid content being hidden behind the navbar */
+    padding-top: 80px;/* Added padding-top to avoid content being hidden behind the navbar */
 }
 
 .container {
@@ -39,6 +41,7 @@ body {
 
 .testimonial-text p {
     margin: 10px 0;
+    font-family: "Roboto", sans-serif;
 }
 
 .testimonial-text .author {
@@ -77,7 +80,7 @@ body {
 }
 
 nav {
-    background-color: rgba(255, 255, 255, 0); 
+    background-color: #302859; 
     opacity: 0.8;
     height: 80px;
     width: 100%;
@@ -85,6 +88,10 @@ nav {
     top: 0;
     left: 0;
     z-index: 1000; /* Ensures navbar stays on top */
+    color: #302859;
+}
+.navb{
+    color: #302859;
 }
 
 label.logo {
@@ -109,11 +116,12 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: aqua;
     font-size: 17px;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
 }
 
 a.active, a:hover {
@@ -186,18 +194,16 @@ a.active, a:hover {
     }
 }
 
-.banner {
-    background-color: #f5f5f55d;
-    padding: 20px;
-}
+
 
 .banner-content {
-    display: flex;
+    
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0;
+    margin-top: 29px;
 }
 
 .text-content {
@@ -216,6 +222,7 @@ a.active, a:hover {
     font-size: 1.2em;
     color: #666;
     margin-bottom: 20px;
+    font-family: "Roboto", sans-serif;
 }
 
 .btn {
@@ -327,11 +334,14 @@ a.active, a:hover {
     font-size: 1.5em;
     margin-bottom: 10px;
     color: #333;
+    font-family: 'Neusharp', sans-serif;
+
 }
 
 .grid-item p {
     font-size: 1em;
     color: #666;
+    font-family: "Roboto", sans-serif;
 }
 
 @media (max-width: 1920px) {
@@ -415,11 +425,13 @@ a.active, a:hover {
 .item h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
+    font-family: 'Galette', sans-serif;
 }
 
 .item p {
     font-size: 1em;
     color: #666;
+    font-family: "Roboto", sans-serif;
 }
 
 .center-image {
@@ -518,10 +530,12 @@ footer .container .sec h2 {
     color: #000;
     font-weight: 600;
     margin-bottom: 15px;
+    font-family: 'Neusharp', sans-serif;
 }
 
 footer .container .sec p {
     color: #fff;
+    font-family: "Roboto", sans-serif;
 }
 
 footer .container .sci {
@@ -539,20 +553,22 @@ footer .container .sci li a {
     display: inline-block;
     width: 36px;
     height: 36px;
-    background: #000;
+    background: white;
     display: grid;
     align-content: center;
     justify-content: center;
     text-decoration: none;
+    border-radius: 30px;
 }
 
 footer .container .sci li a i {
-    color: #fff;
-    font-size: 20px;
+    
+    font-size: 25px;
 }
 
 footer .container .quicklinks h2 {
     margin-bottom: 15px;
+    font-family: 'Neusharp', sans-serif;
 }
 
 footer .container .quicklinks ul li {
@@ -573,6 +589,7 @@ footer .container .contact .info {
 
 footer .container .contact h2 {
     margin-bottom: 15px;
+    font-family: 'Neusharp', sans-serif;
 }
 
 footer .container .contact .info li {
@@ -599,7 +616,10 @@ footer .container .contact .info li a {
     color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.15);
 }
-
+.copyrighttext a{
+    text-decoration: none;
+    color: white;
+}
 @media (max-width: 991px) {
     footer {
         padding: 40px;
@@ -638,6 +658,7 @@ body {
     text-align: center;
     margin-bottom: 20px;
     color: black; /* Dark Blue */
+    font-family: 'Neusharp', sans-serif;
 }
 
 .cards {
@@ -701,6 +722,7 @@ body {
     text-align: center;
     color: black; /* Dark Black */
     margin-bottom: 30px;
+    font-family: 'Neusharp', sans-serif;
 }
 
 .service-cards {
@@ -732,10 +754,12 @@ body {
 .service-card h3 {
     color: black; /* Dark Black */
     margin-bottom: 10px;
+    font-family: 'Galette', sans-serif;
 }
 
 .service-card p {
     color: #333;
+    font-family: "Roboto", sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -787,6 +811,7 @@ body {
 .banner-container {
     position: relative;
     
+    color: #0082e6;
     width: 100%;
     max-width: 1920px;
     overflow: hidden;
@@ -804,7 +829,7 @@ body {
     height: 100%;
     background-size: cover;
     background-position: center;
-    background-image:linear-gradient(rgba(0,0,0,0.5)red,blue),url('banner1.jpg');
+    
 }
 
 .banner-slide.active {
@@ -812,7 +837,30 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start; /* Align items to the start (left) */
-    padding-left: 20px; /* Adjust padding as needed */
+    
+}
+.banner-content {
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    z-index: 2;
+    max-width: 600px;
+}
+
+.banner-content h1{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #17dfb9;
+}
+.banner-content p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Neusharp', sans-serif;
+    color: white;
+    
 }
 
 
@@ -842,6 +890,15 @@ body {
         opacity: 1;
     }
 }
+@media (max-width: 1920px){
+    .banner-content h1 {
+        font-size: 100px;
+    }
+    .banner-content p {
+        font-size: 30px;
+        
+    }
+}
 
 @media (max-width: 768px) {
     .banner-button {
@@ -851,6 +908,15 @@ body {
     .arrow {
         font-size: 1.5rem;
         padding: 8px;
+    }
+    .banner-content {
+        left: 10px;
+    }
+    .banner-content h1 {
+        font-size: 1.8em;
+    }
+    .banner-content p {
+        font-size: 1em;
     }
 }
 
@@ -862,6 +928,12 @@ body {
     .arrow {
         font-size: 1.2rem;
         padding: 6px;
+    }
+    .banner-content h1 {
+        font-size: 2em;
+    }
+    .banner-content p {
+        font-size: 0.9em;
     }
 }
 .customer-speak {
@@ -879,6 +951,7 @@ body {
     font-size: 1.5em;
     color: #333;
     margin-bottom: 40px;
+    font-family: 'Galette', sans-serif;
 }
 
 .testimonial-container {
@@ -1037,4 +1110,5 @@ body {
     color: #707070;
     font-size: 13px;
   }
+  
 
