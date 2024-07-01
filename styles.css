@@ -116,7 +116,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: aqua;
+    color: #17dfb9;
     font-size: 17px;
     padding: 7px 13px;
     border-radius: 3px;
@@ -125,7 +125,7 @@ nav ul li a {
 }
 
 a.active, a:hover {
-    background: #d8649b;
+    text-decoration: underline;
     transition: .5s;
 }
 
