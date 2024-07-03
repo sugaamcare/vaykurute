@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    padding-top: 80px;/* Added padding-top to avoid content being hidden behind the navbar */
+    
 }
 
 .container {
@@ -123,9 +123,12 @@ nav ul li a {
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
 }
-
+a:hover{
+    background-color: #bc005b;
+}
 a.active, a:hover {
     text-decoration: underline;
+    
     transition: .5s;
 }
 

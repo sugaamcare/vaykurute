@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contactpage.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- navbar -->
+    <div>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+              
+              <i class="material-icons">list</i>
+            </label>
+            <label class="logo"><picture>
+                <source media="(max-width: 768px)" srcset="smalllogo.png">
+                <img src="biglogo.png" alt="Vyakurute" class="banner-img">
+              </picture></label>
+            <ul class="navb">
+              <li><a  href="index.html">Home</a></li>
+              <li><a href="#">About US</a></li>
+              <li><a href="#">Product Engineering</a></li>
+              
+              <li><a class="active" href="contactpage.html">Contact US</a></li>
+              
+            </ul>
+        </nav>
+        </div>
+          <!-- navbar ends -->
+          <section class="contact-us">
+            <div class="content">
+                <h2>Don't shy away. Get in touch.</h2>
+                <p>We're excited to get to know you better and begin a dialogue to create impactful things together.</p>
+                <p class="ca">Let's talk!</p>
+            </div>
+         </section>
+    <div class="concontainer">
+        <h1>You are here. But where do you want to be? Tell us how we can help you.</h1>
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="firstName">First Name*</label>
+                <input type="text" id="firstName" name="firstName" required>
+
+                <label for="lastName">Last Name*</label>
+                <input type="text" id="lastName" name="lastName" required>
+
+                <label for="email">Email Address*</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number*</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="howDidYouHear">How Did You Hear About Us?*</label>
+                <input type="text" id="howDidYouHear" name="howDidYouHear" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <section class="locations">
+        <h2>Our Locations</h2>
+        <div class="location">
+            <h3>India</h3>
+            <div class="location-details">
+                <div class="address">
+                    <h4>Ahmedabad</h4>
+                    <p>10th Floor The Ridge<br>
+                    Opp. Novotel, Iscon Cross Road<br>
+                    Ahmedabad, Gujarat - 380060</p>
+                    <p><strong>e:</strong> <a href="mailto:info@vyakurute.com">info@vyakurute.com</a><br>
+                    <a href="mailto:info@vyakurute.com">careers@vyakurute.com</a></p>
+                </div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.399999457281!2d72.5031187759428!3d23.032158684922074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84e632d42b39%3A0x502d7baf3b24ff30!2sMaruti%20Techlabs%20Private%20Limited!5e0!3m2!1sen!2sin!4v1686709491521!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="sec aboutus">
+                <img src="biglogo.png"alt="logo">
+                
+                <p>Vyakurute is a code school exclusively focused on solving entry level tech hiring for high growth ventures. We were founded in June 2018. We are on a mission to make 100K great entry level software engineers.</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-facebook" style="color: #74C0FC;" ></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-x" style="color: #111212;"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram" style="color: red;"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube" style="color: #b52626;"></i></a></li>
+                </ul>
+            </div>
+            <div class="quicklinks">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="">About US</a></li>
+                    <li><a href="">Product Engineering</a></li>
+                    
+                    <li><a href="contactpage.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span>
+                            <i class="fa-solid fa-phone"></i>
+                        </span><p><a href="tel:+919167222521">Call us at +919167222521</a></p>
+                    </li>
+                    <li>
+                        <span>
+                            <i class="fa-solid fa-envelope"></i>
+                        </span><p><a href="mailto:info@vyakurute.com">Mail us:info@vyakurute.com</a></p>
+                    </li>
+                    <li>
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                        </span><p><a href="#">Ahmedabad , INDIA</a></p>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+    <a href="#" id="scroll" style="display: none;"><span></span></a>
+    <div class="copyrighttext">
+        <p>copyright &#169 2024 <a href="https://sugaam.in">Sugaam.in</a> All Rights Reserved</p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="contactpage.js"></script>
+</body>
+</html>
