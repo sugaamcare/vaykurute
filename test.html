@@ -1,59 +1,531 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer Example</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services Section</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+  }
+
+  .awards-section {
+    background: linear-gradient(to right, #bc005b, #4528a5);
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .awards-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+
+  .awards-section p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+  }
+
+  .awards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .award {
+    margin: 10px;
+    flex: 1 1 150px;
+    max-width: 150px;
+  }
+
+  .award img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .awards-section h2 {
+      font-size: 2em;
+    }
+
+    .awards-section p {
+      font-size: 1em;
+    }
+
+    .award {
+      flex: 1 1 120px;
+      max-width: 120px;
+    }
+  }
+
+  @media (max-width: 428px) {
+    .awards-section h2 {
+      font-size: 1.5em;
+    }
+
+    .awards-section p {
+      font-size: 0.9em;
+    }
+
+    .awards-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .award {
+      flex: 1 1 80px;
+      max-width: 80px;
+    }
+  }
+
+  .services-section {
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: #1c1b2d;
+  }
+
+  .services-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 40px;
+  }
+
+  .container img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .content h1{
+    font-size: 36px;
+  }
+
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+
+  .service {
+    flex: 1 1 200px;
+    margin: 20px;
+    text-align: center;
+  }
+
+  .service img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .service h3 {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+
+  @media (min-width: 769px) {
+    .container {
+      padding-left: 20%;
+      padding-right: 20%;
+      padding-top: 0%;
+    }
+
+    .services-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding-right: 20%;
+      padding-left: 20%;
+      padding-bottom: 0%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .services-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  }
+
+  @media (max-width: 428px) {
+    .services-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .service h3 {
+      font-size: 16px;
+    }
+  }
+  .oservices-section {
+    background: linear-gradient(to right, #bc005b, #4528a5);
+    padding: 40px 0 40px 5%;
+    text-align: left;
+  }
+  .oservices-section h2 {
+   font-size: 2em;
+   margin-bottom: 10px;
+ }
+
+.oservices-section p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+  .oservice-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      text-align: center;
+      justify-content: center;
+  }
+
+  .oservice-card {
+      background-color: #2E2E3A;
+      padding: 20px;
+      border-radius: 8px;
+      position: relative;
+      justify-content: center;
+  }
+
+  .oservice-card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 20px;
+      width: 5px;
+      height: calc(100% - 40px);
+      background-color: #4528a5;
+  }
+
+  .oservice-card h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 20px;
+  }
+
+  .oservice-card hr {
+      border: 0;
+      border-top: 10px solid #ffffff;
+      margin: 10px 0;
+  }
+
+  .oservice-card p {
+      font-size: 1em;
+      margin-bottom: 20px;
+  }
+
+  .oservice-card a {
+      color: #bc005b;
+      text-decoration: none;
+      font-weight: bold;
+      
+      align-items: center;
+  }
+
+  .oservice-card a svg {
+      margin-left: 5px;
+  }
+  @media (min-width:769px){
+      .oservice-card h3 {
+          justify-content: center;
+          padding: 50px;
+      
+      }
+      .oservice-card p{
+          padding: 20px;
+      }
+      .oservice-cards{
+          margin-right: 11%;
+      }
+  }
+
+  @media (max-width: 768px) {
+      .oservice-cards {
+          grid-template-columns: repeat(2, 1fr);
+      }
+      .faq-question-container {
+          flex-direction: column;
+          align-items: flex-start;
+      }
+
+      .faq-toggle {
+          align-self: flex-end;
+      }
+  }
+
+  @media (max-width: 428px) {
+      .oservice-cards {
+          grid-template-columns: 1fr;
+      }
+  }
+  .faq-section {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 0 20px;
+      color: #1C1C28;
+  }
+
+  .faq-section h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 20px;
+  }
+
+  .faq-item {
+      border-bottom: 1px solid black;
+      padding: 20px 0;
+  }
+
+  .faq-question-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+  }
+
+  .faq-question {
+      margin: 0;
+      font-size: 1.2em;
+  }
+
+  .faq-answer {
+      display: none;
+      padding: 10px 0;
+      font-size: 1em;
+      color: #555;
+  }
+
+  .faq-toggle {
+      font-size: 1.5em;
+      font-weight: bold;
+  }
+
+  .consultation-button {
+      display: block;
+      width: max-content;
+      margin: 30px auto;
+      padding: 10px 20px;
+      background: linear-gradient(to right, #bc005b, #4528a5);
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+  }
+
+</style>
 </head>
 <body>
-    <footer>
-        <div class="container">
-            <div class="sec aboutus">
-                <h2>Vyakurute</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima reiciendis quas error at alias illum distinctio velit perspiciatis facere ipsa.</p>
-                <ul class="sci">
-                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                </ul>
-            </div>
-            <div class="quicklinks">
-                <h2>Quick Links</h2>
-                <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Contact US</a></li>
-                </ul>
-            </div>
-            <div class="contact">
-                <h2>Contact Us</h2>
-                <ul class="info">
-                    <li>
-                        <span>
-                            <i class="fa-solid fa-phone"></i>
-                        </span><p><a href="#">+9111111</a></p>
-                    </li>
-                    <li>
-                        <span>
-                            <i class="fa-solid fa-envelope"></i>
-                        </span><p><a href="#">+9111111</a></p>
-                    </li>
-                    <li>
-                        <span>
-                            <i class="fa-solid fa-location-dot"></i>
-                        </span><p><a href="#">+9111111</a></p>
-                    </li>
 
-                </ul>
-            </div>
-        </div>
-    </footer>
-    <div class="copyrighttext">
-        <p>copyright 2024 Sugaam. All Rights Reserved</p>
+<div class="awards-section">
+  <h2>Awards & Recognitions</h2>
+  <p>We're proud to accept industry accolades for our commitment to unparalleled results, client service, and continuous growth.</p>
+  <div class="awards-container">
+    <div class="award">
+      <img src="images/image_21_1_1492f98444.webp" alt="GoodFirms - Top Artificial Intelligence Company">
     </div>
+    <div class="award">
+      <img src="images/Certification_Badge_1_2_ebc4d0ee8a.webp" alt="Great Place to Work">
+    </div>
+    <div class="award">
+      <img src="images/clutch_new_f92cb412bb.webp" alt="Clutch - Top Artificial Intelligence Company">
+    </div>
+    <div class="award">
+      <img src="images/image_22_4cb4308416.webp" alt="The Economic Times - India's Growth Champions">
+    </div>
+    <div class="award">
+      <img src="images/image_23_07e9ce0b60.webp" alt="GoodFirms - Best Company to Work With">
+    </div>
+  </div>
+</div>
+
+<div class="services-section">
+  <section class="container">
+    <img src="images/Our_People_Our_Strength_d7bb731890.webp" alt="Team Image">
+    <div class="content">
+      <h1>Our People = Our Strength</h1>
+      <p>We are as good as our team. And that's why we believe in hiring, training, and retaining the best talent. From following a robust hiring process to ensuring the best product development tools, our practices and frameworks reflect our aim to provide the best services and be the best software development team in the market.</p>
+      <p>We take pride in the broad spectrum of world-class products built by our team. Our team of over a hundred software developers is well-versed in different combinations of JavaScript, React Native, Python, Java, Scala, PHP, and other languages. Our team's areas of expertise also include many underlying platforms, APIs, IEDs, databases, and frameworks.</p>
+    </div>
+  </section>
+  <div class="services-container">
+    <div class="service">
+      <img src="images/Project_b50e3160ac.svg" alt="Project Managers">
+      <h3>Project Managers</h3>
+    </div>
+    <div class="service">
+      <img src="images/Technical_c40e9672cb.svg" alt="Technical Architects">
+      <h3>Technical Architects</h3>
+    </div>
+    <div class="service">
+      <img src="images/Data_57ee6a966a.svg" alt="Data Scientists">
+      <h3>Data Scientists</h3>
+    </div>
+    <div class="service">
+      <img src="images/Business_fcbc6ffb64.svg" alt="Business Analysts">
+      <h3>Business Analysts</h3>
+    </div>
+    <div class="service">
+      <img src="images/Software_8d94e792c6.svg" alt="Software Engineers">
+      <h3>Software Engineers</h3>
+    </div>
+    <div class="service">
+      <img src="images/Integration_and_798c50d1ff.svg" alt="Integration & Release Engineers">
+      <h3>Integration & Release Engineers</h3>
+    </div>
+    <div class="service">
+      <img src="images/QA_7251e88a36.svg" alt="QA Engineers">
+      <h3>QA Engineers</h3>
+    </div>
+    <div class="service">
+      <img src="images/System_89179cdbe0.svg" alt="System Designers">
+      <h3>System Designers</h3>
+    </div>
+    <div class="service">
+      <img src="images/Devops_11a1c6eebf.svg" alt="DevOps Engineers">
+      <h3>DevOps Engineers</h3>
+    </div>
+    <div class="service">
+      <img src="images/UI_UX_d8dbcc0243.svg" alt="UI/UX Designers">
+      <h3>UI/UX Designers</h3>
+    </div>
+    <div class="service">
+      <img src="images/Integration_and_798c50d1ff.svg" alt="IT Personnel">
+      <h3>IT Personnel</h3>
+    </div>
+    <div class="service">
+      <img src="images/Support_3eb2bb66b8.svg" alt="Support Personnel">
+      <h3>Support Personnel</h3>
+    </div>
+  </div>
+</div>
+
+
+<section class="oservices-section">
+  <h2>Looking For Other Services?</h2>
+  <p>We offer the full spectrum of services to assist enterprises in working better & achieving their goals. Take a look at our other service offerings below.</p>
+  <div class="oservice-cards">
+      <div class="oservice-card">
+          <h3>SaaS Application Development</h3>
+          <hr>
+          <p>With a focus on user experience, reliability, and continuous improvement, we ensure that your SaaS solutions stand out in the market, driving customer satisfaction and business growth.</p>
+          <a href="#">Know More </a>
+      </div>
+      <div class="oservice-card">
+          <h3>Web App Development</h3>
+          <hr>
+          <p>With a focus on user-centric design, robust functionality, and seamless performance, we create bespoke web applications that captivate users and drive tangible results. Let us build stellar web apps that aid your business growth.</p>
+          <a href="#">Know More </a>
+      </div>
+      <div class="oservice-card">
+          <h3>Mobile App Development</h3>
+          <hr>
+          <p>Our seasoned developers, designers, and quality assurance experts collaborate closely with you to understand your app requirements and create customized mobile applications that captivate audiences.</p>
+          <a href="#">Know More </a>
+      </div>
+  </div>
+</section>
+<section class="faq-section">
+  <h2>FAQs</h2>
+  <div class="faq-item">
+      <div class="faq-question-container">
+          <p class="faq-question">1. How can you help me develop my product idea?</p>
+          <span class="faq-toggle">+</span>
+      </div>
+      <p class="faq-answer">We help you develop your product idea by providing expert guidance and a structured process for product development.</p>
+  </div>
+  <div class="faq-item">
+      <div class="faq-question-container">
+          <p class="faq-question">2. What are the steps of product development?</p>
+          <span class="faq-toggle">+</span>
+      </div>
+      <p class="faq-answer">The steps of product development include ideation, planning, design, development, testing, and launch.</p>
+  </div>
+  <div class="faq-item">
+      <div class="faq-question-container">
+          <p class="faq-question">3. What about my product's intellectual property rights?</p>
+          <span class="faq-toggle">+</span>
+      </div>
+      <p class="faq-answer">We ensure your intellectual property rights are protected through agreements and legal measures.</p>
+  </div>
+  <div class="faq-item">
+      <div class="faq-question-container">
+          <p class="faq-question">4. How much will it cost to develop a software product?</p>
+          <span class="faq-toggle">+</span>
+      </div>
+      <p class="faq-answer">The cost of developing a software product varies based on the complexity and requirements of the project.</p>
+  </div>
+  <div class="faq-item">
+      <div class="faq-question-container">
+          <p class="faq-question">5. Why should I choose your company for product development?</p>
+          <span class="faq-toggle">+</span>
+      </div>
+      <p class="faq-answer">We have a team of experienced developers and a proven track record of successful product development.</p>
+  </div>
+  <div class="faq-item">
+      <div class="faq-question-container">
+          <p class="faq-question">6. What kind of products have you developed?</p>
+          <span class="faq-toggle">+</span>
+      </div>
+      <p class="faq-answer">We have developed a wide range of products, including web applications, mobile apps, and SaaS solutions.</p>
+  </div>
+  <div class="faq-item">
+      <div class="faq-question-container">
+          <p class="faq-question">7. Which technology do you use to develop products?</p>
+          <span class="faq-toggle">+</span>
+      </div>
+      <p class="faq-answer">We use the latest technologies and frameworks, such as React, Angular, Node.js, and Python.</p>
+  </div>
+  <div class="faq-item">
+      <div class="faq-question-container">
+          <p class="faq-question">8. What is the importance of product development in my business?</p>
+          <span class="faq-toggle">+</span>
+      </div>
+      <p class="faq-answer">Product development is crucial for innovation, staying competitive, and meeting customer needs effectively.</p>
+  </div>
+  <a href="#" class="consultation-button">Book a FREE Consultation</a>
+</section>
+
+<script>
+  document.querySelectorAll('.faq-question-container').forEach(container => {
+      container.addEventListener('click', () => {
+          const answer = container.nextElementSibling;
+          const toggle = container.querySelector('.faq-toggle');
+          const isExpanded = answer.style.display === 'block';
+
+          document.querySelectorAll('.faq-answer').forEach(ans => ans.style.display = 'none');
+          document.querySelectorAll('.faq-toggle').forEach(tog => tog.textContent = '+');
+
+          if (!isExpanded) {
+              answer.style.display = 'block';
+              toggle.textContent = '-';
+          } else {
+              answer.style.display = 'none';
+              toggle.textContent = '+';
+          }
+      });
+  });
+</script>
+
 </body>
 </html>
