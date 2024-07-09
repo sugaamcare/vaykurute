@@ -862,10 +862,10 @@ font-family: Roboto;
 
    
     .questionBox{
-        height: 150vh;
+        height: 160vh;
         width: 103%;
         margin-left: -24%;
-        margin-top: 8%;
+        margin-top: 10%;
 
     }
   
@@ -879,7 +879,7 @@ font-family: Roboto;
 
 
 
-@media (width <= 1020px) {
+@media (width <= 1080px) {
  
   
 .Clientele{
