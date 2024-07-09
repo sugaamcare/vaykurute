@@ -2172,7 +2172,7 @@ a.active, a:hover {
         display: inline-block;
         width: 36px;
         height: 36px;
-        background: #17dfb9;
+        background: #fff;
         display: grid;
         align-content: center;
         justify-content: center;
