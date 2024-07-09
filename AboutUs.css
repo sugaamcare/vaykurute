@@ -569,14 +569,7 @@ top: -173px;
         font-size: 22   px;
     }
 }
-@media (width <= 400px) {
-     .cultureChild{
-                height: 294vh;
-       
-        margin-top: 9%;
 
-    }
-}
 
 
 @media (width <= 450px) {
@@ -591,10 +584,10 @@ top: -173px;
         align-items: center;
      }
     .cultureChild{
-        height: 222vh;
+        height: 294vh;
         width: 99%;
         margin-left: 34px;
-        margin-top: -23%;
+        margin-top: 9%;
 
     }
     .box{
