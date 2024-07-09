@@ -569,6 +569,14 @@ top: -173px;
         font-size: 22   px;
     }
 }
+@media (width <= 400px) {
+     .cultureChild{
+                height: 294vh;
+       
+        margin-top: 9%;
+
+    }
+}
 
 
 @media (width <= 450px) {
