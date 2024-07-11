@@ -33,9 +33,26 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        alert("Form submitted successfully!");
+        // Form submission with Web3forms
+        const formData = new FormData(contactForm);
+        formData.append('phone', phone);  // Adding the formatted phone number to the form data
 
-        // Form submission logic here
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert("Form submitted successfully!");
+            } else {
+                alert("Failed to submit form. Please try again later.");
+            }
+        })
+        .catch(error => {
+            alert("An error occurred while submitting the form. Please try again later.");
+        });
+
     });
 
     phoneInputField.addEventListener('countrychange', function() {
