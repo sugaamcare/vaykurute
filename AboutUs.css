@@ -1339,6 +1339,13 @@ width: 400px;
 .lead{
     margin-top: 7%;
 }
+
+.lead p{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+
 .line1{
     display: grid;
     justify-content: center;
