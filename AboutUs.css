@@ -1756,3 +1756,37 @@ footer .sec{
 .contact{
     text-align: center;
 }
+
+
+
+
+ .fst1{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 5%;
+    }
+    @media (max-width:450px) {
+        .fst1{
+            flex-direction: column;
+        }
+        .ldr{
+            margin-left: 45px;
+        }
+        .cl1{
+            margin-top: 5%;
+        }
+    }
+    .ima{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-left: 44px;
+        background-color: aqua;
+    }
+    .cl1{
+        align-items: center;
+        text-align: center;
+        width: 300px;
+        margin-top: 5%;
+       
+    }
