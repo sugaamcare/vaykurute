@@ -2287,6 +2287,7 @@ nav a.active, nav a:hover {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
         grid-gap: 10px;
+        height: 100%;
     }
     .sec {
         padding-left: 20px;
@@ -2418,19 +2419,29 @@ nav a.active, nav a:hover {
     }
     
     .copyrighttext {
-        width: 99;
+        /* width: 99;
         background-color: #000958;
-        padding: 20px 0px 30px;
+        padding: 10px 0px 10px;
         text-align: center;
         color: rgb(210, 255, 240);
         /* border: solid rgba(0, 0, 0, 0.15); */
-        border: none;
+        width: 100%;
+        height: 40px;
+        background-color: #000958;
+        text-align: center;
+        font-size: 16px;
+        padding-top: 10px;
     }
-    .copyrighttext a{
+    .copyrighttext p{
         text-decoration: none;
         color: rgb(210, 255, 240);
+        margin: 0px;
+        font-family: 'Neusharp', sans-serif;
     }
 
+    .copyrighttext a{
+        color: #17dfb9;
+    }
     @media (max-width: 1440px) {
         footer{
             height: 65vh;
@@ -2453,7 +2464,7 @@ nav a.active, nav a:hover {
     @media (max-width: 768px) {
 
         footer{
-            height: 100vh;
+            height: 180vh;
         }
         footer .container-footer {
             width: 100%;
@@ -2470,16 +2481,15 @@ nav a.active, nav a:hover {
         .contact{
             padding-top: 0;
         }
-        .copyrighttext{
-            width: 100%;
-            padding: 0;
-            margin: 0;
-        }
+        .copyrighttext p{
+           font-size: 14px;
+        
+    }
     }
 
     @media (max-width: 428px){
         footer{
-            height: 100vh;
+            height: 170vh;
         }
 
         .quicklinks ul li{
@@ -2495,7 +2505,7 @@ nav a.active, nav a:hover {
             padding-top: 0;
         }
 
-        .copyrighttext{
+        .copyrighttext p{
             font-size: 12px;
         }
 
