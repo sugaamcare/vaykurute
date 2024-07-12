@@ -1677,7 +1677,7 @@ footer .container .contact h2 {
 footer .container .contact .info li {
     display: grid;
     grid-template-columns: 30px 1fr;
-    margin-bottom: 16px;
+/*     margin-bottom: 16px; */
 }
 
 footer .container .contact .info li span {
@@ -1730,4 +1730,29 @@ footer .container .contact .info li a {
     /* .footer{
         margin-top: 100%;
     } */
+}
+
+.copyrighttext {
+    width: 100%;
+    background: #000958;
+    /* padding: 20px 100px 30px; */
+    text-align: center;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+.copyrighttext a{
+    text-decoration: none;
+    color: white;
+}
+
+footer .sec{
+   
+    text-align: center;
+}
+
+.quicklinks{
+    text-align: center;
+}
+.contact{
+    text-align: center;
 }
