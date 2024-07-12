@@ -762,10 +762,10 @@ top: -173px;
 .question{
     background: linear-gradient(to right, #bc005b, #4528a5);
     height: 70vh;
-    width:138%;
+    width:100%;
     position:relative;
     margin-top: -6%;
-   left: -20%;
+  
    
 }
 
