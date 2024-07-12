@@ -939,13 +939,13 @@ font-family: Roboto;
 
 
 .Clientele{
-    width: 139%;
-    height: 100%;
-    background-color:#262531;
-    margin-left: -21%;
-    position: relative;
-    top: 0px;
-   text-align: center;
+    width: 100%;
+   height: 100%;
+   background-color:#262531;
+  
+   position: relative;
+
+  text-align: center;
  
 }
 
