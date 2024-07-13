@@ -268,7 +268,7 @@ nav a.active, nav a:hover {
     }
 }
 
-@media (max-width:428px) {
+@media (max-width:430px) {
     .content {
         margin:0;
         padding-right:0;
@@ -434,7 +434,7 @@ nav a.active, nav a:hover {
 
       
       
-      @media (max-width: 428px){
+      @media (max-width: 430px){
         .logo-grid {
             grid-template-columns: repeat(2,1fr);
         }
@@ -520,7 +520,7 @@ nav a.active, nav a:hover {
         }
     }
 
-    @media (max-width: 428px){
+    @media (max-width: 430px){
         .container-roadlock{
             height: 100%;
             width: 100%;
@@ -640,7 +640,7 @@ nav a.active, nav a:hover {
         }
     }
 
-    @media (max-width: 428px){
+    @media (max-width: 430px){
         .body-part{
             width: 100%;
             height: 4750px;
@@ -758,7 +758,7 @@ nav a.active, nav a:hover {
 
     }
 
-    @media (max-width: 428px){
+    @media (max-width: 430px){
         .inner-body{
         grid-template-columns:1fr;
         width: 70%;
@@ -909,7 +909,7 @@ nav a.active, nav a:hover {
         }
       }
 
-    @media (max-width: 428px){
+    @media (max-width: 430px){
         .cards{
         display: grid;
         grid-template-columns: 1fr;
@@ -1006,7 +1006,7 @@ nav a.active, nav a:hover {
         }
     }
 
-    @media (max-width: 428px){
+    @media (max-width: 430px){
         .dev-body{
             width: 85%;
             height: 100%;
@@ -1176,7 +1176,7 @@ nav a.active, nav a:hover {
                         /* margin-left: 10%; */
                        }
         }
-    @media (max-width: 428px){
+    @media (max-width: 430px){
         .side-main{
             position: relative;
             bottom: 15%;
@@ -1277,7 +1277,7 @@ nav a.active, nav a:hover {
         }
     }
 
-    @media (max-width: 428px){
+    @media (max-width: 430px){
         .container1{
             height: auto;
             width: 100%;
@@ -1456,7 +1456,7 @@ nav a.active, nav a:hover {
         }
       }
 
-    @media (max-width: 428px){
+    @media (max-width: 430px){
         .main{
             height: 100%;
         }
@@ -1540,7 +1540,7 @@ nav a.active, nav a:hover {
         }
     }
 
-    @media (max-width: 428px){
+    @media (max-width: 430px){
         .sec-quate{
             width: 100%;
             position: relative;
@@ -1590,7 +1590,7 @@ nav a.active, nav a:hover {
     }
 
     
-    @media (max-width: 428px){
+    @media (max-width: 430px){
         .tech-img img{
             width: 300px;
             height: 320px;
@@ -1693,7 +1693,7 @@ nav a.active, nav a:hover {
     }
 
     
-    @media (max-width: 428px){
+    @media (max-width: 430px){
         .inner-body-choose{
             height: 170vh;
             position: relative;
@@ -1828,7 +1828,7 @@ nav a.active, nav a:hover {
     }
 }
 
-    @media (max-width:428px){
+    @media (max-width:430px){
     .container-data{
         width: 90%;
         height: 100%;
@@ -1930,7 +1930,7 @@ nav a.active, nav a:hover {
         }
       }
     
-      @media (max-width: 428px) {
+      @media (max-width: 430px) {
         .awards-section h2 {
           font-size: 1.5em;
           color: white;
@@ -2060,7 +2060,7 @@ nav a.active, nav a:hover {
         }
       }
     
-      @media (max-width: 428px) {
+      @media (max-width: 430px) {
 
         .container-section img{
             width: 250px;
@@ -2189,7 +2189,7 @@ nav a.active, nav a:hover {
           }
       }
     
-      @media (max-width: 428px) {
+      @media (max-width: 430px) {
           .oservice-cards {
               grid-template-columns: 1fr;
           }
@@ -2257,7 +2257,7 @@ nav a.active, nav a:hover {
             max-width: 600px;
         }
       }
-      @media (max-width: 428px){
+      @media (max-width: 430px){
         .faq-section{
             max-width: 250px;
         }
@@ -2487,7 +2487,7 @@ nav a.active, nav a:hover {
     }
     }
 
-    @media (max-width: 428px){
+    @media (max-width: 430px){
         footer{
             height: auto;
         }
