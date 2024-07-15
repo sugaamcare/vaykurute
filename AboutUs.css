@@ -1796,6 +1796,11 @@ footer .sec{
         margin-left: 44px;
         background-color: aqua;
     }
+ .ima img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
     .cl1{
         align-items: center;
         text-align: center;
