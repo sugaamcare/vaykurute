@@ -271,46 +271,7 @@
             </div>
             <button class="banner-button">Know More</button>
         </div>
-        <div class="banner-slide" style="background-image: url('2ban.png');">
-            <div class="banner-content">
-                
-                <h1>Engineer <br> Your  <br>Sucess</h1>
-                
-            </div>
-            <button class="banner-button">Know More</button>
-        </div>
-        <div class="banner-slide" style="background-image: url('4ban.png');">
-            <div class="banner-content">
-                
-                <h1>Blueprints <br>For Digital  <br>Experience</h1>
-                
-            </div>
-            <button class="banner-button">Know More</button>
-        </div>
-        <div class="banner-slide" style="background-image: url('7ban.png');">
-            <div class="banner-content">
-                <h1>Crafting <br>Digital <br>Masterpieces</h1>
-                
-            </div>
-            <button class="banner-button">Know More</button>
-        </div>
-        <div class="banner-slide" style="background-image: url('5ban.png');">
-            <div class="banner-content">
-                
-                <h1>Shape Your<br> Software <br>Strategy</h1>
-                
-            </div>
-            <button class="banner-button">Know More</button>
-        </div>
-        <div class="banner-slide" style="background-image: url('6ban.png');">
-            <div class="banner-content">
-                <h1>Future <br>Proof <br>Tech designs</h1>
-                
-            </div>
-            <button class="banner-button">Know More</button>
-        </div>
-        <span class="arrow left">&#10094;</span>
-        <span class="arrow right">&#10095;</span>
+       
     </div>
 
     <section class="section">
@@ -486,11 +447,7 @@
                             <i class="fa-solid fa-phone"></i>
                         </span><p><a href="tel:+919167222521">Call us at +919167222521</a></p>
                     </li>
-                    <li>
-                        <span>
-                            <i class="fa-solid fa-envelope"></i>
-                        </span><p><a href="mailto:info@vyakurute.com">Mail us:info@vyakurute.com</a></p>
-                    </li>
+                    
                     <li>
                         <span>
                             <i class="fa-solid fa-location-dot"></i>
@@ -502,52 +459,13 @@
         </div>
 
     </footer>
-    <a href="#" id="scroll" style="display: none;"><span></span></a>
+    
     <div class="copyrighttext">
         <p>copyright &#169 2024 Designed by <a href="https://sugaam.in">Sugaam.in</a> All Rights Reserved</p>
     </div>
-    <script>
-        $(document).ready(function(){ 
-      $(window).scroll(function(){ 
-          if ($(this).scrollTop() > 100) { 
-              $('#scroll').fadeIn(); 
-          } else { 
-              $('#scroll').fadeOut(); 
-          } 
-      }); 
-      $('#scroll').click(function(){ 
-          $("html, body").animate({ scrollTop: 0 }, 600); 
-          return false; 
-      }); 
-  });
-      </script>
+   
 </body>
-<script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.banner-slide');
-    const totalSlides = slides.length;
-    const prevArrow = document.querySelector('.arrow.left');
-    const nextArrow = document.querySelector('.arrow.right');
 
-    function showSlide(index) {
-        slides[currentSlide].classList.remove('active');
-        currentSlide = (index + totalSlides) % totalSlides;
-        slides[currentSlide].classList.add('active');
-    }
-
-    function nextSlide() {
-        showSlide(currentSlide + 1);
-    }
-
-    function prevSlide() {
-        showSlide(currentSlide - 1);
-    }
-
-    nextArrow.addEventListener('click', nextSlide);
-    prevArrow.addEventListener('click', prevSlide);
-
-    setInterval(nextSlide, 4000); // Auto-slide every 4 seconds
-</script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
     let currentTestimonialIndex = 0;
@@ -579,9 +497,7 @@
 });
 
 </script>
-<script>
-    
-</script>
+
 
 
 </html>
