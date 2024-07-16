@@ -519,14 +519,14 @@ footer {
     z-index: 1; /* Added z-index to ensure footer is below the navbar */
 }
 
-footer .container {
+footer .fcontainer {
     width: 100%;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     grid-gap: 20px;
 }
 
-footer .container .sec h2 {
+footer .fcontainer .sec h2 {
     position: relative;
     color: #17dfb9;
     font-weight: 600;
@@ -534,23 +534,23 @@ footer .container .sec h2 {
     font-family: 'Neusharp', sans-serif;
 }
 
-footer .container .sec p {
+footer .fcontainer .sec p {
     color: #fff;
     font-family: "Roboto", sans-serif;
 }
 
-footer .container .sci {
+footer .fcontainer .sci {
     margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(4, 50px);
     justify-content: center;
 }
 
-footer .container .sci li {
+footer .fcontainer .sci li {
     list-style: none;
 }
 
-footer .container .sci li a {
+footer .fcontainer .sci li a {
     display: inline-block;
     width: 36px;
     height: 36px;
@@ -562,22 +562,22 @@ footer .container .sci li a {
     border-radius: 30px;
 }
 
-footer .container .sci li a i {
+footer .fcontainer .sci li a i {
     
     font-size: 25px;
 }
 
-footer .container .quicklinks h2 {
+footer .fcontainer .quicklinks h2 {
     margin-bottom: 15px;
     font-family: 'Neusharp', sans-serif;
     color: #17dfb9;
 }
 
-footer .container .quicklinks ul li {
+footer .fcontainer .quicklinks ul li {
     list-style: none;
 }
 
-footer .container .quicklinks ul li a {
+footer .fcontainer .quicklinks ul li a {
     color: #fff;
     text-decoration: none;
     margin-bottom: 10px;
@@ -585,29 +585,29 @@ footer .container .quicklinks ul li a {
     font-size: medium;
 }
 
-footer .container .contact .info {
+footer .fcontainer .contact .info {
     list-style: none;
     position: relative;
 }
 
-footer .container .contact h2 {
+footer .fcontainer .contact h2 {
     margin-bottom: 15px;
     font-family: 'Neusharp', sans-serif;
     color: #17dfb9;
 }
 
-footer .container .contact .info li {
+footer .fcontainer .contact .info li {
     display: grid;
     grid-template-columns: 30px 1fr;
     margin-bottom: 16px;
 }
 
-footer .container .contact .info li span {
+footer .fcontainer .contact .info li span {
     color: #17dfb9;
     font-size: 20px;
 }
 
-footer .container .contact .info li a {
+footer .fcontainer .contact .info li a {
     color: #fff;
     text-decoration: none;
 }
@@ -628,7 +628,7 @@ footer .container .contact .info li a {
     footer {
         padding: 40px;
     }
-    footer .container {
+    footer .fcontainer {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -640,7 +640,7 @@ footer .container .contact .info li a {
 }
 
 @media (max-width: 768px) {
-    footer .container {
+    footer .fcontainer {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
