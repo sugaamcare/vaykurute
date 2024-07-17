@@ -952,7 +952,7 @@ body {
 
 @media (max-width: 428px) {
     .banner-content{
-        bottom: 0px;
+        bottom: 150px;
         left: 45px;
     }
     .banner-button {
