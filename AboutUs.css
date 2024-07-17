@@ -87,7 +87,7 @@ body {
     
     }
     .picture img{
-        width: 350px;
+        width: 320px;
         margin-bottom: 20px;
         margin-left: -10px;
 
@@ -939,8 +939,8 @@ font-family: Roboto;
     .questionBox{
               height: 1024px;
         width: 90%;
-        margin-left: -57px;
-        margin-top: 34%;
+        margin-left: -65px;
+        margin-top: 36%;
 
     }
     .qbox{
