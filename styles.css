@@ -897,7 +897,7 @@ body {
 }
 @media (max-width: 1920px){
     .banner-content{
-        top: 50%;
+        top: 30%;
     }
     .banner-content h1 {
         font-size: 80px;
@@ -907,7 +907,7 @@ body {
         
     }
     .banner-button{
-        bottom: 20%;
+        bottom: 30%;
     left: 15%;
     }
 }
@@ -916,8 +916,8 @@ body {
     .banner-button {
         font-size: 14px;
         padding: 8px 16px;
-        bottom: 45%;
-        left: 20%;
+        /* bottom: 45%; */
+        /* left: 20%; */
     }
     .arrow {
         font-size: 1.5rem;
@@ -942,7 +942,7 @@ body {
     .banner-button {
         font-size: 23px;
         padding: 6px 12px;
-        bottom: 45%;
+        /* bottom: 45%; */
         left: 25%;
     }
     .arrow {
