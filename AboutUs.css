@@ -1155,7 +1155,7 @@ nav a.active,nav a:hover {
       width: 100px; /* Smaller size for smaller screens */
     }
     nav{
-        width: 103%;
+        width: 100%;
     }
   }
 
