@@ -869,6 +869,21 @@ body {
 }
 
 
+.banner-slide.active {
+    display: block;
+}
+.banner-button {
+    position: absolute;
+    transform: translateX(-50%);
+    background:#17dfb9;
+    color: #000958;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 2;
+    
+}
+
 
 .arrow {
     position: absolute;
@@ -897,63 +912,62 @@ body {
 }
 @media (max-width: 1920px){
     .banner-content{
-        top: 30%;
+        top: 400px;
     }
     .banner-content h1 {
-        font-size: 70px;
+        font-size: 80px;
     }
     .banner-content p {
-        font-size: 25px;
+        font-size: 30px;
         
     }
     .banner-button{
-        bottom: 28%;
-    left: 15%;
+        bottom: 210px;
+    left: 180px;
+    padding: 20px 30px;
+    font-size: 20px;
     }
 }
 
 @media (max-width: 768px) {
     .banner-button {
-        font-size: 14px;
-        padding: 8px 16px;
-        /* bottom: 45%; */
-        /* left: 20%; */
+        font-size: 16px;
+        padding: 10px 16px;
+        bottom: 330px;
+        left: 150px;
     }
-    .arrow {
-        font-size: 1.5rem;
-        padding: 8px;
-    }
+    
     .banner-content {
-        left: 10px;
-        top: 35%;
+        left: 100px;
+        bottom: 230px;
     }
     .banner-content h1 {
-        font-size: 40px;
+        font-size: 50px;
     }
     .banner-content p {
-        font-size: 1em;
+        font-size: 25px;
+        text-align: left;
     }
 }
 
 @media (max-width: 428px) {
     .banner-content{
-        top: 35%;
+        bottom: 200px;
+        left: 45px;
     }
     .banner-button {
-        font-size: 23px;
+        font-size: 12px;
         padding: 6px 12px;
-        /* bottom: 45%; */
-        left: 25%;
+        bottom: 350px;
+        left: 150px;
     }
-    .arrow {
-        font-size: 1.2rem;
-        padding: 6px;
-    }
+    
     .banner-content h1 {
-        font-size: 30px;
+        font-size: 50px;
     }
     .banner-content p {
-        font-size: 0.9em;
+        font-size: 25px;
+        text-align: left;
     }
 }
 .customer-speak {
