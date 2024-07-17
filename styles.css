@@ -913,6 +913,7 @@ body {
 @media (max-width: 1920px){
     .banner-content{
         top: 400px;
+        
     }
     .banner-content h1 {
         font-size: 80px;
@@ -922,10 +923,10 @@ body {
         
     }
     .banner-button{
-        bottom: 210px;
-    left: 180px;
+    margin-top: 20px;    
     padding: 20px 30px;
     font-size: 20px;
+    left: 100px;
     }
 }
 
@@ -933,8 +934,7 @@ body {
     .banner-button {
         font-size: 16px;
         padding: 10px 16px;
-        bottom: 330px;
-        left: 150px;
+        
     }
     
     .banner-content {
@@ -952,14 +952,13 @@ body {
 
 @media (max-width: 428px) {
     .banner-content{
-        bottom: 200px;
+        bottom: 0px;
         left: 45px;
     }
     .banner-button {
         font-size: 12px;
         padding: 6px 12px;
-        bottom: 350px;
-        left: 150px;
+        
     }
     
     .banner-content h1 {
