@@ -912,14 +912,14 @@ body {
 }
 @media (max-width: 1920px){
     .banner-content{
-        top: 400px;
+        bottom: 170px;
         
     }
     .banner-content h1 {
-        font-size: 80px;
+        font-size: 60px;
     }
     .banner-content p {
-        font-size: 30px;
+        font-size: 25px;
         
     }
     .banner-button{
