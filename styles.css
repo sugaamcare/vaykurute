@@ -206,7 +206,9 @@ a.active, a:hover {
     margin: 0;
     margin-top: 29px;
 }
-
+.banner-button a{
+    text-decoration: none;
+}
 .text-content {
     flex: 1;
     padding: 20px;
@@ -607,7 +609,11 @@ footer .fcontainer .contact .info li span {
     font-size: 20px;
 }
 
-footer .fcontainer .contact .info li a {
+footer .fcontainer .contact .info li  p {
+    color: #fff;
+    text-decoration: none;
+}
+footer .fcontainer .contact .info li  a {
     color: #fff;
     text-decoration: none;
 }
@@ -881,7 +887,7 @@ body {
     border-radius: 10px;
     cursor: pointer;
     z-index: 2;
-    
+   
 }
 
 
