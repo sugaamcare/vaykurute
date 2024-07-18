@@ -43,7 +43,7 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    line-height: 50px;
+    line-height: 65px;
     margin: 0 5px;
 }
 
@@ -133,9 +133,10 @@ nav a.active, nav a:hover {
 
 @media (max-width: 858px){
    .navb{
-    width: 80%;
+    width: 100%;
    }
 }
+
  /* Software Product Development Services */
 .container {
     width: 100%;
@@ -317,7 +318,7 @@ nav a.active, nav a:hover {
 
 
 
-/* @media (min-width: 428px){
+/* @media (min-width: 430px){
     .content h1{
         font-size: 1.5rem;
         line-height: 1.1;
@@ -1332,7 +1333,6 @@ nav a.active, nav a:hover {
         color:  white;
         font-size: 35px;
         font-family: 'Neusharp', sans-serif;
-       
     }
 
     .card-main {
@@ -1619,6 +1619,7 @@ nav a.active, nav a:hover {
         font-size: 35px;
         font-family: 'Neusharp', sans-serif;
         padding: 20px;
+        text-align: center;
 
     }
 
@@ -2269,7 +2270,7 @@ nav a.active, nav a:hover {
 
       /* footer css */
 
-    footer {
+      footer {
         position: relative;
         width: auto;
         /* padding: 50px 100px; */
@@ -2542,3 +2543,7 @@ nav a.active, nav a:hover {
             line-height: 1.5;
         }
     }
+
+
+
+   
