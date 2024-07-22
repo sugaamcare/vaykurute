@@ -1,809 +1,1866 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="stylesheet" href="AboutUs.css">
-    <!-- <link rel="stylesheet" href="AboutStyle.css"> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <!-- <script src="https://kit.fontawesome.com/f0e46ad537.js" crossorigin="anonymous"></script> -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        .section {
-            display: none;
-        }
-
-        #section1 {
-            display: block;
-        }
 
 
-        .nav-item a {
-            text-decoration: none;
-        }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+ 
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
 
 
-        .carousel-inner {
-            width: 50%;
-            position: relative;
-            top: -10px;
-            left: 25%;
-        }
+.first{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 2%;
+    margin-top: 7%;
+    margin-right: 10%;
+}
+.paragraph{
+    width: 53%;
+    align-items: center;
 
-        .carousel-item img {
-            width: 100%;
-            height: auto;
-        }
+}
+.paragraph p{
+    font-size: 17px;
+    line-height: 30px;
+    font-family: Roboto;
+    color: #444444;
 
-        .carousel-caption {
-            position: absolute;
-            top: 310px;
-            left: 0;
-            width: 100%;
+    
+}
+.paragraph h1{
+    font-family: Neusharp;
+}
+.picture{
+    width: 45%;
+    margin-top: 40px;
+}
+.picture img{
+    width: 100%;
+}
+@media (width <= 768px) {
+    .picture img {
+        width: 480px;
+        margin-bottom: 17px;
+        margin-left: 26px;
+    }
+}
 
-            color: white;
-        }
+@media (max-width:450px) {
+    .picture img{
+        width: 350px;
+        margin-bottom: 20px;
+        margin-left: -10px;
 
+    }
+}
+@media (width <= 768px) {
+    .first{
+        display: flex;
+       flex-direction: column-reverse;
+    }
+    .paragraph{
+        width: 100%;
+        align-items: center;
       
+    
+    }
+   
   
-        @media (max-width:768px) {
-            .carousel-inner {
-                width: 100%;
-                left: 0%;
+}
 
-            }
 
+@media (width <= 428px) {
+    .first{
+        display: flex;
+       flex-direction: column-reverse;
+    }
+    .paragraph{
+        width: 100%;
+        align-items: center;
+      
+    
+    }
+    .picture img{
+        width: 275px;
+        margin-bottom: 20px;
+        margin-left: -10px;
+
+    }
+  
+}
+
+
+.navbarr {
+     margin-top: 6%;
+    overflow: hidden;
+    /* margin-left: 6%; */
+
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-item a {
+    display: block;
+    color:black;
+    text-align: center;
+    padding: 14px 60px;
+    text-decoration: none;
+    position: relative;
+    font-size: 20px;
+}
+
+
+
+.nav-item a:hover::after,
+.nav-item.active a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+ 
+    background-color:#9A0B70;
+    bottom: 0;
+    left: 0;
+}
+
+
+.nav-item a:hover{
+    color:#9A0B70;
+}
+.nav-item.active a {
+   
+    color:#9A0B70;
+
+}
+.nav-item li{
+    position: relative;
+}
+
+.story{
+    text-align: center;
+    margin-top: 7%;
+    margin-bottom: 5%;
+}
+
+@media (width <= 768px) {
+    .navbar{
+        width: 100%;
+    }
+    .nav-item a{
+        padding: 0px 0px;
+        font-size: 12px;
+    }
+    
+}
+
+@media (width <= 1024px) {
+    .navbar{
+        width: 100%;
+    }
+    .nav-item a{
+        padding: 0px 0px;
+        font-size: 12px;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+/* Section partner-------------------- */
+.partner{
+    width: 70%;
+  margin-left: 15%;
+    align-items: center;
+
+}
+.servicepartner{
+    background-color: #423F56;
+ height: 70vh;
+ width: 100%;
+}
+.Associations{
+    height: 70vh;
+    width: 100%;
+    background-color: aqua;
+}
+/* Section partner  end-------------------- */
+
+
+/* our Story Section---------------------- */
+
+
+ 
+.story p{
+    color: #5F5F5F;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 3%;
+    text-align: start;
+    font-family: Roboto;
+    font-size: 20px;
+    }
+    .story h1{
+        font-family: Neusharp;
+        font-size: 50px;
+    }
+    
+    @media (max-width:1024px) {
+        .story p{
+            width: 92%;
+            margin-left: 5%;
         }
        
-        @media (width <= 450px) {
+    }
+
+
+   @media (width <= 768px) {
+    .carousal{
+     
+        height: 55vh;
+        width: 100%;
+    }
+    .carousel-item img{
+        height: 300px;
+        width: 100%;
+       }
+   }
+   @media (max-width:390px) {
+    .slider{
+        height: 50vh;
+    }
+   }
+
+ 
+.vision{
+    height: auto;
+    width: 100%;
+   
+    margin-top: 6%;
+    background: linear-gradient(to right, #bc005b, #4528a5);
+}
+.mission{
+    height: auto;
+    width: 100%;
+ 
+   
+}
+.vision p{
+    margin-left: 14%;
+    width: 70%;
+    margin-top: 30px;
+    font-size: 22px;
+    padding-bottom: 50px;
+    color: white;
+    font-family: Roboto;
+ 
+}
+.vision h1{
+    margin-left: 14%;
+  padding-top:28px ;
+  color: white;
+  font-family: Neusharp;
+  font-size: 50px;
+
+}
+.mission p{
+    margin-left: 14%;
+    width: 70%;
+    margin-top: 30px;
+    font-size: 22px;
+    padding-bottom: 50px;
+    font-family: Roboto;
+}
+.mission h1{
+    margin-left: 14%;
+    padding-top:28px ;
+    font-family: Neusharp;
+    font-size: 50px;
+  
+}
+
+@media (width <= 1024px) {
+    .vision{
+        height: auto;
+        width: 100%;
+     
+        /* margin-top: 10%; */
+ 
+    }
+    .mission{
+        height: auto;
+        width: 100%;
+     
+       
+    }
+    .vision p{
+       width: 80%;
+        margin-top: 30px;
+        font-size: 22px;
+     
+     
+    }
+    .mission p{
+ 
+        width: 80%;
+        margin-top: 30px;
+        font-size: 22px;
+    }
+ 
+    
+}
+@media (width <= 768px) {
+    .vision p{
+        /* margin-left: 10%; */
+        width: 80%;
+        margin-top: 30px;
+        font-size: 22px;
+    }
+    .vision{
+    
+        width: 100%;
+      
+    }
+    .mission p{
+        /* margin-left: 5%; */
+        width: 80%;
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    .mission{
+     
+        width: 100%;
+    }
+  
+}
+
+@media (width <= 450px) {
+    .vision p{
+        margin-left: 10%;
+        width: 90%;
+        margin-top: 30px;
+        font-size: 22px;
+    }
+    .vision{
+        /* margin-left: -4px; */
+        width: 100%;
+        /* margin-top: -76%; */
+    }
+    .mission p{
+        /* margin-left: 5%; */
+        width: 80%;
+        margin-top: 30px;
+        font-size: 22px;
+    }
+    .mission{
+        /* margin-left: 2px; */
+        width: 100%;
+    }
+  
+}
+.culture{
+    height: 555px;
+    width: 100%;
+ 
+    /* background-color: #f05443; */
+    background: linear-gradient(to right, #bc005b, #4528a5);
+
+}
+.culture p{
+    margin-left: 14%;
+    width: 70%;
+    margin-top: 30px;
+    font-size: 22px;
+    color: white;
+    font-family: Roboto;
+   
+}
+.culture h1{
+    margin-left: 14%;
+    padding-top:50px ;
+    color: white;
+    font-family: Neusharp;
+    font-size: 50px;
+}
+.cultureChild{
+    height: 850px;
+    width: 50%;
+  position: relative;
+  left: 12%;
+top: -173px;
+  z-index: 2;
+    background-color:#FFFFFF;
+    box-shadow: 2px 1cap 10px 2px rgba(101, 102, 103, 0.392);
+ border-radius: 5px;
+ /* border: 1px solid black; */
+    
+}
+.box{
+    margin-top: 25px;
+    /* margin-left: 48px; */
+
+    
+
+}
+.box p{
+    font-family: Roboto;
+}
+.box1 h3{
+    font-family: Neusharp;
+    font-size: 30px;
+}
+.box1{
+    background-color: white;
+
+    height: 250px;
+    width: 250px;
+    margin-left: 60px;
+    margin-right: 10px;
+    margin-top: 70px;
+    /* margin-bottom: px; */
+    
+
+
+}
+
+
+.box1 img{
+    height: 60px;
+
+}
+.box123{
+    display: flex;
+}
+.rest{
+    display: flex;
+}
+
+
+
+
+@media (width <= 1920px) {
+    
+    .cultureChild{
+        margin-top:-4%;
+        width: 75%;
+        /* left: -6%; */
+        height:822px;
+    }
+   
+    .box1 {
+        margin-bottom: 20px;
+        width: 350px;
+    }
+} 
+
+@media (width <= 1024px) {
+    .culture{
+        height: 586px;
+        width: 100%;
+ 
+    
+    
+    }
+    .cultureChild{
+        margin-top:-9%;
+        width: 83%;
+        /* left: -6%; */
+        /* height: auto; */
+    }
+    .box{
+        height: 800px;
+        width: 99%;
+        margin-left: -19px;
+       
+    }
+    .box1{
+        margin-bottom: 20px;
+    }
+} 
+
+
+ @media (width <= 1024px) {
+    .brand{
+      position: relative;
+      top: -113px;
+      left: 1%;
+    }
+   .img1 img{
+  width: 50%;
+
+   }
+   .imagee{
+   width: 100%;
+   }
+}
+@media (width <= 768px) {
+    .box123{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+    .rest{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     }
+    .cultureChild{
+        height: 1730px;
+        width: 73%;
+        margin-left: 25px;
+        margin-top: -20%;
+
+    }
+    .box{
+        margin-left: -10%;
+    }
+    .culture{
+        /* margin-left: -20px; */
+        width: 100%;
+        height: 700px;
+    }
+    .box1 p{
+        font-size: 22   px;
+    }
+    .box1{
+        width: 300px;
+        margin-bottom: -42px;
+    }
+}
+
+
+
+@media (width <= 450px) {
+    .box123{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+    .rest{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     }
+    .cultureChild{
+        height: 1840px;
+        width: 88%;
+    margin-left: -17px;
+        margin-top: 22%;
+
+    }
+    .box{
+        margin-left: -10%;
+    }
+    .culture{
+  
+        width: 100%;
+        height: 700px;
+    }
+    .box1{
+        width: 87%;
+        height:50%;
+    }
+}
+.brand{
+    align-items: center;
+    margin-top: -4%;
+    text-align: center;
+ 
+}
+.brand p{
+    width: 80%;
+    margin-left: 11%;
+    font-size: 20px;
+    font-family: Roboto;
+}
+.brand h1{
+    font-family: Neusharp;
+    font-size: 55px;
+}
+.imagee{
+    display: flex;
+    justify-content: center;
+}
+.img1 img{
+    height: 55px;
+    /* margin-left: 30px; */
+}
+
+@media (width <= 768px) {
+.imagee{
+    display: flex;
+    flex-direction: column;
+}
+.img1 img{
+    height: 310px;
+}
+.brand{
+   width: 100%;
+   margin-left: 0%;
+    /* margin-top:55%; */
+}
+.brand p{
+    width: 100%;
+    margin-left: -0px;
+    padding-left: 10px;
+    font-family: Roboto;
+    
+}
+}
+
+
+
+.slider {
+    position: relative;
+   
+    margin: auto;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+
+    height: 550px;
+    width: 77%;
+    /* margin-left: 7px; */
+    margin-top: 20px;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: calc(100% * 5); /* Adjust based on the number of slides */
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+}
+
+.slide img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.prev, .next {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.dots {
+   
+  
+    text-align: center;
+    position: absolute;
+    bottom: 6px;
+    width: 100%;
+}
+
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+@media screen and (width <= 768px) {
+    .slider {
+        width: 100%;
+       
+    }
+ 
+}
+
+
+
+@media screen and (width <= 450px) {
+    .slider {
+        width: 100%;
+        height: 360px;
+    }
+
+}
+
+
+.carousel-item img{
+    height: 600px;
+
+   }
+
+
+
+
+   /* questions===================== */
+
+.question{
+    background: linear-gradient(to right, #bc005b, #4528a5);
+    height: 450px;
+    width:100%;
+    position:relative;
+    margin-top: -6%;
+  
+   
+}
+
+.question h1{
+    margin-top: 65px;
+    padding-top: 30px;
+    margin-left: 10%;
+    color: white;
+    font-family: Neusharp;
+}
+.question p{
+    margin-left: 10%;
+    margin-top: 55px;
+    width: 70%;
+    color: white;
+    font-size: 18px;
+    font-family: Roboto;
+}
+  
+
+@media (width <= 768px) {
+.question{
+    position: relative;
+    top: 231%;
+    width: 100%;
+    left: -8px;
+    /* margin-left: -7px; */
+}
+    }
+
+    @media (width <= 450px) {
+        .question{
+            position: relative;
+            top: 231%;
+            width: 100%;
+            /* left: 3px; */
+            /* margin-left: -7px; */
+        }
+            }
+.questionBox{
+    height: 450px;
+    width: 52%;
+  position: relative;
+  left: 21%;
+top: -200px;
+
+    background-color:#FFFFFF;
+    box-shadow: 2px 1cap 10px 2px rgba(101, 102, 103, 0.392);
+ border-radius: 5px;
+ /* border: 1px solid black; */
+    
+}
+.qbox{
+    margin-top: 25px;
+    /* margin-left: 48px; */
+
+    padding-top: 50px;
+
+}
+.questionBox p{
+font-family: Roboto;
+}
+.questionBox h3{
+    font-family:Neusharp;
+    }
+.qbox1{
+    background-color: white;
+
+    height: 232px;
+    width: 250px;
+    margin-left: 60px;
+   
+
+    
+
+}
+
+.qbox1 img{
+    height: 60px;
+
+}
+.qbox123{
+    display: flex;
+}
+.qrest{
+    display: flex;
+}
+
+/* @media (width <= 450px) {
     .question{
         margin-top: 8%;
         
-        height: 678px;
+        height: 500px;
     }
-}
-        @media screen and (max-width: 450px) {
-    
-    .side-section img{
-      width: 232px;
-      
-      }
-     
-}
-.container {
-    /* width: 95%; */
-}
-
-    </style>
-</head>
-
-<body>
-
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <!-- <i class="fa-solid fa-bars"></i> -->
-            <i class="material-icons">list</i>
-        </label>
-        <label class="logo">
-            <picture>
-                <source media="(max-width: 768px)" srcset="AboutImage/smalllogo.png">
-                <img src="AboutImage/biglogo.png" alt="Vyakurute" class="banner-img">
-            </picture>
-        </label>
-        <ul class="navb">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#" class="active">About US</a></li>
-            <li><a href="service-page.html">Product Engineering</a></li>
-
-            <li><a href="contactpage.html">Contact US</a></li>
-
-        </ul>
-    </nav>
-    <!-- <div class="aboutContent"> -->
-    <div class="first">
-        <div class="paragraph">
-            <h1>WE’RE VYAKURUTE
-               </h1>
-
-            <p>We’ve spent the last decade at the intersection of value-driven solutions and technology-fueled
-                impact. Vyakurute is the product of a shared obsession for science and technology and its
-                ability to bring about large-scale change in the lives of real people. Our clients command our
-                actions and our teams establish our brand and its values. Up close, we’re a refreshing mix of
-                youthful candor and skilled know-how, with a burning desire for innovation.</p>
-        </div>
-        <div class="picture">
-            <img src="https://marutitech.com/_next/image/?url=https%3A%2F%2Fstorage.googleapis.com%2Fnextjs-cdn%2F190dea1a_about_us_hero_617617a2f9.png&w=1920&q=75"
-                alt="">
-        </div>
-    </div>
-    <div class="navbarr">
-        <ul class="nav-list">
-            <li class="nav-item active"><a onclick="openSection(1)" href="#section1">Our Story</a></li>
-            <li class="nav-item"><a onclick="openSection(2)" href="#section2">How We Work</a></li>
-            <li class="nav-item"><a onclick="openSection(3)" href="#section3">Leadership Team</a></li>
-            <li class="nav-item"><a onclick="openSection(4)" href="#section4">Partners</a></li>
-            <li class="nav-item"><a onclick="openSection(5)" href="#section5">Client Success Stories
-                </a></li>
-        </ul>
-    </div>
-
-    <!-- <div class="container"> -->
-        <div id="section1" class="section">
-            <!-- <div class="container"> -->
-            <div class="story">
-                <h1>… and this is our story.</h1>
-                <p>Our story begins with ones. One small assignment, one diligent team, one trusting client, one bold
-                    deal. It was in 2009 when Mitul, our founder, put down roots of Vaykurute with a single
-                    project for a US-based client. Since then, we've been cutting our teeth in digital transformation
-                    solutions with trailblazing products that set a new standard for conducting smart business.</p>
-            </div>
-
-
-     
-            <div class="slider">
-                <div class="slider-wrapper">
-                    <div class="slide"><img src="AboutImage/meeting.png" alt="Image 1"></div>
-                    <div class="slide" style="height: 60px;"><img src="AboutImage/cake.png" alt=""></div>
-                    
-                    <div class="slide"><img src="AboutImage/gether.png" alt="Image 3"></div>
-                    <div class="slide"><img src="AboutImage/cake2.png" alt="Image 4"></div>
-                    <div class="slide"><img src="AboutImage/outd.png" alt="Image 5"></div>
-                    <div class="slide"><img src="AboutImage/meeting2.png" alt="Image 6"></div>
-
-
-                </div>
-
-                <div class="dots">
-                    <span class="dot" onclick="currentSlide(0)"></span>
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                    <span class="dot" onclick="currentSlide(4)"></span>
-                    <span class="dot" onclick="currentSlide(5)"></span>
-                </div>
-              
-            </div>
-       
-
-            <!-- </div> -->
-
-            <!-- <div class="dots">
-                <span class="dot" onclick="currentSlide(0)"></span>
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-            </div> -->
-            <div class="vision">
-                <h1>Our Vision</h1>
-                <p>To redefine businesses through digital transformation and be a globally respected enterprise
-                    pushing the boundaries of conventional business solutions.</p>
-            </div>
-            <div class="mission">
-                <h1>Our Mission</h1>
-                <p>To carve an ascendable niche and assist enterprises in achieving their business objectives
-                    through an innovation led approach by providing the best-in-class consulting, IT solutions &
-                    services.</p>
-            </div>
-            <div class="culture">
-                <h1>Our Culture</h1>
-                <p>Our company culture is vibrant and ever-evolving. With every new face that joins the team, a
-                    small part of us grows in a large way. We take initiative and share responsibilities with an
-                    entrepreneurial outlook. This is not just a workplace. It is our stage to learn, grow and shine
-                    as one team.</p>
-            </div>
-            <div class="cultureChild">
-                <div class="box">
-                    <div class="box123">
-                        <div class="box1">
-                            <img src="AboutImage/Our_Culture_Transparency_9b378fd079.svg"
-                                class="animated-element" alt="">
-                            <h3 class="animated-element">Transparency</h3>
-                            <p class="animated-element">From the get-go, we make a conscious effort to clearly
-                                communicate our goals,
-                                responsibilities, expectations, and process with our teams as well as our clients.
-                            </p>
-                        </div>
-                        <div class="box1">
-
-                            <img src="AboutImage/Our_Culture_Integrity_of_Character_84697f556e.svg"
-                                class="animated-element" alt="">
-                            <h3 class="animated-element">Integrity of Characte</h3>
-                            <p class="animated-element">There are no shortcuts to ethical business. We practice honesty
-                                and lead by example in a
-                                way that promotes a culture of mutual respect across the company.</p>
-                        </div>
-                        <div class="box1">
-                            <img src="AboutImage/Our_Culture_Commitment_to_Customers_f737422258.svg"
-                                class="animated-element" alt="">
-                            <h3 class="animated-element">Commitment to Customers</h3>
-                            <p class="animated-element">We only make promises we can keep. We deliver on every task we
-                                undertake, putting our
-                                clients ahead of us every step of the way.</p>
-                        </div>
-                    </div>
-                    <div class="rest">
-                        <div class="box1">
-                            <img src="AboutImage/Our_Culture_Equal_Opportunity_Employer_0140318b1d.svg"
-                                alt="" class="animated-element">
-                            <h3 class="animated-element">Equal Opportunity Employer</h3>
-                            <p class="animated-element">We're a progressive meritocracy. We constantly strive to
-                                maintain an environment that is
-                                safe and free of prejudice. We hire on the basis of individual talent and
-                                qualifications, not labels.</p>
-                        </div>
-                        <div class="box1">
-                            <img src="AboutImage/Our_Culture_Practicing_Empathy_73643c7445.svg"
-                                alt="" class="animated-element">
-                            <h3 class="animated-element">Practicing Empathy</h3>
-                            <p class="animated-element">We really list en. By being considerate and accepting of those
-                                around us, we've learnt to
-                                broaden our own perspectives without a shred of arrogance.</p>
-
-                        </div>
-                        <div class="box1">
-                            <img src="AboutImage/Our_Culture_Value_Driven_f194017756.svg"
-                                alt="" class="animated-element">
-                            <h3 class="animated-element">Value-driven</h3>
-                            <p class="animated-element"> Our actions are purpose-led and we strive to create value for
-                                our customers, investors
-                                and employees alike. Our orientation is to do more with less — high output, low
-                                maintenance.</p>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <div class="brand">
-                <h1>Our Brand</h1>
-                <p>Since its inception, Vaykurute has been a forward-looking brand, set out to redefine digital
-                    experiences for businesses and their customers. We put agency in the hands of our people and trust
-                    them to overcome challenges, take mitigated risks, and deliver exceptionally innovative solutions.
-                </p>
-               
-                   
-                </div>
-            </div>
-<!-- </div> -->
+} */
 
 
 
+
+@media (width <= 1920px) {
+    .qbox1{
+        width: 320px;
         
-        <div id="section2" class="section">
-
-            <div class="story">
-                <h1>How We Do It</h1>
-                <p>We come to work every day to simplify complex business problems with enterprise software solutions.
-                    Our agile development strategies and multidisciplinary industry exposure gives us a competitive edge
-                    to provide quality services that streamline your ventures and expedite your growth. Riddle us with
-                    your dilemmas. We're in this together.</p>
-            </div>
-
-            <div class="side-container">
-                <div class="sidebar">
-                    <ul>
-                        <li><a href="#ssection1" class="sidebar-link active">Documentation</a></li>
-                        <li><a href="#ssection2" class="sidebar-link">Development</a></li>
-                        <li><a href="#ssection3" class="sidebar-link">Acceptance Testing</a></li>
-                        <li><a href="#ssection4" class="sidebar-link">Delivery</a></li>
-                        <li><a href="#ssection5" class="sidebar-link">Support and Maintenance</a></li>
-                    </ul>
-                </div>
-
-                <div class="side-content">
-                    <div id="ssection1" class="side-section">
-                        <h2>Documentation</h2>
-                        <img src="AboutImage/Documentation_c723e8bc9c.webp" alt="">
-                        <p>We now document the project's milestones, scope, proposed solution, delivery timelines, and
-                            initial system designs for better visibility and efficient execution. This process helps us
-                            prioritize the key focus areas and avoid redundancies in the workflow. Once this document
-                            gets your approval, we quickly move on to full-scale development.</p>
-                    </div>
-                    <div id="ssection2" class="side-section">
-                        <h2>Development</h2>
-                        <img src="AboutImage/Development_27d7e54e38.webp" alt="">
-                        <p>With rolled-up sleeves, we now go into full-on programming mode to build your solution. The
-                            agile process is split into multiple iterations and at every stage, we involve you to
-                            reanalyse the requirements and go over each milestone reached to gain comprehensive feedback
-                            and update the solution as we go.</p>
-                    </div>
-                    <div id="ssection3" class="side-section">
-                        <h2>Acceptance Testing</h2>
-                        <img src="AboutImage/Acceptance_Testing_a2a97e26ba.webp" alt="">
-                        <p>Once the desired scope is met and all the features are tested for performance, we run the
-                            solution in the staging environment for further testing. This is to ascertain that the code
-                            is thoroughly tested and accepted before going into production. Several compatibility issues
-                            and bug fixes are handled at this stage.</p>
-                    </div>
-                    <div id="ssection4" class="side-section">
-                        <h2>Delivery</h2>
-                        <img src="AboutImage/Delivery_a8e3df1377.webp" alt="">
-                        <p>This is the deployment stage you're most excited about. Now, we work together to install the
-                            solution on the hosting platform. We conduct the process of installation, configuration, and
-                            performance check with sharp technical excellence so that your users' needs are met along
-                            with your business objectives.</p>
-                    </div>
-                    <div id="ssection5" class="side-section">
-                        <h2>Support and Maintenance</h2>
-                        <img src="AboutImage/Support_and_Maintenance_9e8286a5e7.webp" alt="">
-                        <p>Delivery is not where our relationship ends. We're in it for the long haul. Post roll out, we
-                            closely monitor the solution's performance, get feedback, provide support and upgrades to
-                            maintain its consistency and quality. Iterative testing and improvements ensure that it is
-                            up-to-date and meets all your changing needs and expectations.</p>
-                    </div>
-
-                </div>
-            </div>
-            <div class="question">
-                <h1>Why us? Good question.</h1>
-                <p>From ideation to design, from MVPs to enterprise systems, we own the entire process. With quality
-                    at the heart of what we do, we're not afraid to break the mold and bring your vision to life.
-                    Our digital transformation and enterprise software development services can facilitate
-                    operations, strengthen customer support, accelerate growth, and eventually create a solid moat
-                    for your business.</p>
-            </div>
-            <div class="questionBox">
-                <div class="qbox">
-                    <div class="qbox123">
-                        <div class="qbox1">
-                            <img src="AboutImage/Timely_delivery_6557837ce5_0adb97298a.svg" alt=""
-                                class="animated-element">
-                            <h3 class="animated-element">Diverse Skill Sets</h3>
-                            <p class="animated-element">FWith a mix of complementary skill sets, our teams steer forward
-                                with multidisciplinary expertise. We're at our magical best when we create together.
-                            </p>
-                        </div>
-                        <div class="qbox1">
-
-                            <img src="AboutImage/SLA_driven_259b0c52fd_cd4e8deb2b.svg" alt="" class="animated-element">
-                            <h3 class="animated-element">SLA-driven</h3>
-                            <p class="animated-element">We have SLAs (Service Level Agreements) in place which are
-                                jointly agreed with each client to guarantee optimal performance levels and efficiency.
-                            </p>
-                        </div>
-
-                    </div>
-                    <div class="qrest">
-                        <div class="qbox1">
-                            <img src="AboutImage/Timely_delivery_6557837ce5_0adb97298a.svg" alt=""
-                                class="animated-element">
-                            <h3 class="animated-element">Timely Delivery</h3>
-                            <p class="animated-element">We defy the odds by adhering to strict time frames to provide
-                                on-time delivery, thereby preventing cost overruns.</p>
-                        </div class="animated-element">
-
-                        <div class="qbox1">
-                            <img src="AboutImage/Customer_first_vision_93485abf30_26f09e8e43.svg" alt=""
-                                class="animated-element">
-                            <h3 class="animated-element">Customer-first Vision</h3>
-                            <p class="animated-element"> We believe that customer loyalty is earned, not bought.
-                                Addressing your needs and solving your business problems is just as much our priority as
-                                it is yours.</p>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <div class="Clientele">
-                <h1>Clientele</h1>
-
-                <div class="imggg">
-                    <div class="imgg1"><img src="AboutImage/zuru_.webp" alt=""></div>
-                    <div class="imgg1"><img src="AboutImage/ikea.webp" alt=""></div>
-                    <div class="imgg1"><img src="AboutImage/piramal.webp" alt=""></div>
-                    <div class="imgg1"><img src="AboutImage/kalpataru_group_bd5b617688.webp" alt=""></div>
-
-
-                    <div class="imgg1"><img src="AboutImage/symphony_limited.webp" alt=""></div>
-                    <div class="imgg1"><img src="AboutImage/zydus_group_.webp" alt=""></div>
-                    <div class="imgg1"><img src="AboutImage/deloitte_.webp" alt=""></div>
-                    <div class="imgg1"><img src="AboutImage/optimizely.webp" alt=""></div>
-
-
-
-                    <div class="imgg1"><img src="AboutImage/ubisoft_f07c2e471f.webp" alt=""></div>
-                    <div class="imgg1"><img src="AboutImage/sterling_accuris_945bd38fee.webp" alt=""></div>
-                    <div class="imgg1"><img src="AboutImage/escalon_services_d7f622a1dc.webp" alt=""></div>
-                    <div class="imgg1"><img src="AboutImage/electronic_arts_1fd9045cb3.webp" alt=""></div>
-
-
-                    <div class="imgg1"><img src="AboutImage/kathryn_harbour_3b6bdd09a2.webp" alt=""></div>
-                    <div class="imgg1"><img src="AboutImage/hayward_baker_74491818fe.webp" alt=""></div>
-                    <div class="imgg1"><img src="AboutImage/granite_properties_13eec539ae.webp" alt=""></div>
-                    <div class="imgg1"><img src="AboutImage/ibm_71a9b856b5.webp" alt=""></div>
-
-                </div>
-            </div>
-
-
-        </div>
-
-
-
-
-</div>
-
-
+       }
 
    
+    .questionBox{
+        height: 600px;
+        width: 54%;
+      
+
+    }
+    
 
 
 
-    <div id="section3" class="section">
+}
 
+
+
+@media (width <= 1024px) {
+ 
+  
+.Clientele{
+  height: 150vh;
+    
+}
+
+
+}
+@media (width <= 1024px) {
+    .question{
+        margin-top: 8%;
         
-<div class="ldr">
-    <div class="Leader">
-            <h1>Leadership Team</h1>
-        </div>
-        <div class="fst1">
-            <div class="cl1">
-                <div class="ima">
-                    <!-- <img src="AboutImage/cake2.png"> -->
-                </div>
-                    <h1>Ravi Jain</h1>
-                  <h2>(Founder)</h2>
-                    <p>Ravi leads and orchestrates cross- functional strategic alignment of the complete product portfolio</p>
-                  <a href="##"><i class="fa-brands fa-twitter"></i></a>
-             <a href="https://www.linkedin.com/in/technicaljk">   <i class="fa-brands fa-linkedin"></i></a>
+        height: 600px;
+    }
+
+   
+    .questionBox{
+        height: 600px;
+        width: 76%;
+        margin-left: -9%;
+        /* margin-top: 10%; */
+
+    }
+    
+  
+.Clientele{
+    margin-top: 1%;
+    
+}
+
+
+}
+
+@media (width <= 768px) {
+    .qbox123{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+    .qrest{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     }
+    .questionBox{
+        height: 1070px;
+        width: 73%;
+        margin-left: -75px;
+        margin-top: 4%;
+
+    }
+    .qbox{
+        margin-left: -10%;
+    }
+   .qbox1{
+    width: 295px;
+    
+   }
+}
+@media (width <= 450px) {
+    .qbox1{
+        width: 250px;
+        
+       }
+    .qbox123{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+    .qrest{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     }
+    .questionBox{
+              height: 1024px;
+        width: 90%;
+        margin-left: -53px;
+        margin-top: 34%;
+
+    }
+    .qbox{
+        margin-left: -10%;
+    }
+   
+}
+
+
+.Clientele{
+    width: 100%;
+   height: 100%;
+   background-color:#262531;
+  
+   position: relative;
+
+  text-align: center;
+ 
+}
+
+
+.Clientelee h1{
+    color: white;
+    margin-top: 5%;
+    padding-top: 50px;
+    font-family: Neusharp;
+}
+.imgg1 img{
+width: 141px;
+/* background-color: #FFFFFF; */
+}
+.imggg{
+    margin-top: 5%;
+    margin-left: 5%;
+    display: grid;
+    grid-template-columns: .3fr .3fr .3fr .3fr;
+    grid-template-rows: .2fr .2fr .2fr .2fr;
+}
+
+
+@media (width <= 768px) {
+.Clientele{
+  margin-top: -18%;
+ 
+  width: 100%;
+  height: 1000px;
+}
+
+    .imggg{
+        margin-left: 20%;
+        grid-template-columns: .2fr .2fr .2fr;
+        grid-template-rows: .2fr .2fr .2fr;
+    }
+   
+    
+
+}
+
+@media (width <= 450px) {
+    .Clientele{
+      margin-top: -18%;
+      
+      width: 100%;
+      height: 1378px;
+    }
+    
+        .imggg{
+            margin-left: 10%;
+            grid-template-columns: .2fr .2fr;
+            grid-template-rows: .2fr .2fr .2fr .2fr;
+        }
+       
+        
+    }
+
+@media (max-width:1024px) {
+   
+}
+
+
+
+.section5{
+    width: 100%;
+}
+
+
+
+.Clientelee{
+    width: 100%;
+    height: 100%;
+    background-color:#262531;
+   
+    position: relative;
+    top: 276%;
+   text-align: center;
+ 
+}
+.Clientele h1{
+    font-family: Neusharp;
+    padding-top: 40px;
+    color: white;
+    font-size: 55px;
+}
+
+
+.side-section p{
+    font-family: Roboto;
+}
+.side-section h2{
+    font-family: Neusharp;
+    font-size: 40px;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nav {
+    background-color: #000958; 
+    opacity: 0.8;
+    height: 80px;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures navbar stays on top */
+    color: #302859;
+}
+.navb{
+    color: #000958;
+}
+
+label.logo {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    width: 150px; /* Adjust the width as needed */
+    height: auto;
+    z-index: 10;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #17dfb9;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav a.active,nav a:hover {
+    text-decoration: underline;
+    
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 952px) {
+    label.logo {
+        color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 60px;
+   
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+@media (max-width: 768px) {
+    .logo {
+      width: 100px; /* Smaller size for smaller screens */
+    }
+    nav{
+        width: 100%;
+    }
+  }
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        flex-direction: column;
+        justify-content: center;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover, a.active {
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+
+/* side bar start */
+
+
+.side-section {
+    display: none; /* Hide all sections by default */
+    margin-bottom: 20px;
+    padding: 20px;
+    margin-top: 5%;
+
+}
+
+.side-section.active {
+    display: block; /* Show active section */
+}
+
+        .side-container {
+    display: flex;
+    /* flex: 1; */
+}
+
+.sidebar {
+    width: 200px;
+
+    padding: 20px;
+   
+    height: 100%;
+    /* position: fixed; */
+    overflow-y: auto;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-link {
+    text-decoration: none;
+    color: #333;
+    padding: 30px 5px;
+    display: block;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-link:hover::before,
+.sidebar-link.active::before {
+    content: '';
+    position: absolute;
+    left: -3px;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #9A0B70;;
+}
+
+.side-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 200px;
+}
+
+.side-section{
+    width:70%;
+   
+    }
+.side-section img{
+width: 500px;
+
+}
+
+.side-section img{
+   margin-top: 30px;
+   margin-bottom: 30px
+    
+    }
+
+  .side-container{
+    margin-left: 15%;
+  }
+
+    @media screen and (max-width: 768px) {
+        .side-content{
+            margin-left: -16%;
+                  }
+                  .side-section img{
+                    width: 300px;
+                    
+                    }
+                   .side-container{
+                    display: flex;
+                    /* flex-direction: column; */
+                   } 
+                   .side-section {
+                    width: 100%;
+                   }
+    }
+
+    @media screen and (max-width: 450px) {
+       
+                   .side-container{
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 10%;
+                   } 
                 
+    }
+
+
+
+
+@media screen and (max-width: 450px) {
+    
+              .side-section img{
+                width: 200px;
                 
-            </div>
-            <div class="cl1">
-                <div class="ima">
-                    <!-- <img src="circle.jpg"> -->
-                </div>
-                    <h1>Jignesh Kapadia</h1>
-                  <h2>(Founder)</h2>
-                    <p>Jignesh brings 17+ years of Software
-                        Product Portfolio Management experience.</p>
-                 <a href="##"><i class="fa-brands fa-twitter"></i></a>
-             <a href="##">   <i class="fa-brands fa-linkedin"></i></a>
-                
-              
-            </div>
-        </div>
-        <div class="fst1">
-            <div class="cl1">
-                <div class="ima">
-                    <img src="AboutImage/abhishek.png">
-                </div>
-                    <h1>Abhishek</h1>
-                <h2>(Co-Founder)</h2>
-                    <p>With Over 19+ years of Industry Experience.
-                        Specialties: Data Science, Data Modelling,
-                        Machine
-                        Learning,
-                        Performance
-                        Engineering,
-                        and
-                        Design
-                        Software
-                        Development</p>
-<a href="##"><i class="fa-brands fa-twitter"></i></a>
-             <a href="##">   <i class="fa-brands fa-linkedin"></i></a>
-                
-                
-            </div>
-            <div class="cl1">
-                <div class="ima">
-                    <!-- <img src="circle.jpg"> -->
-                </div>
-                    <h1>Gourav</h1>
-                 <h2>(Co-Founder)</h2>
-                    <p>Accomplished, Award and founding
-                        forward-thinking Chief Technical Officer
-                        with an impressive 27 year tenure
-                        specializing in the development.</p>
-                   <a href="##"><i class="fa-brands fa-twitter"></i></a>
-             <a href="##">   <i class="fa-brands fa-linkedin"></i></a>
-                
-              
-            </div>
-        </div>
-        <div class="fst1">
-            <div class="cl1">
-                <div class="ima">
-                    <img src="AboutImage/05_Jayesh_Photo_C.jpg">
-                </div>
-                    <h1>Jayesh</h1>
-                 <h2>(Co-Founder)</h2>
-                    <p>Experienced Graphic Designer wvith a
-                        demonstrated history of working in the
-                        marketing and designing industry.</p>
-                  <a href="##"><i class="fa-brands fa-twitter"></i></a>
-             <a href="##">   <i class="fa-brands fa-linkedin"></i></a>
-                
-                
-            </div>
-            <div class="cl1">
-                <div class="ima">
-                    <img src="AboutImage/chetan.png">
-                </div>
-                    <h1>Chetan Patel</h1>
-                 <h2>(Co-Founder)</h2>
-                    <p>Experienced Sales with a proven track
-                        record in driving revenue growth and
-                        building high-performance sales eams</p>
-                <a href="##"><i class="fa-brands fa-twitter"></i></a>
-             <a href="##">   <i class="fa-brands fa-linkedin"></i></a>
-                
-              
-            </div>
-        </div>
-    </div>
-</div>
+                }
+               
+}
 
-    <div id="section4" class="section">
-        <div class="partner">
-            <h1>Partners</h1>
-            <p>We recognize that it is pertinent to forge key partnerships & collaborate with vendors and partners alike, in order for
-                us to provide better value propositions, premium support and help you accelerate your ambitions. Thus, we
-                persistently continue to build strategic alliances with other established players in the market, so as to deliver genuine
-                added value to our customers.
-                Our affiliation with a wide partner network allows us to create the most innovative solutions with exceptional
-                capabilities to meet our clients changing requirements. If you would like to be a part of our ever growing network
-                write to us on hello@marutitech.com and let's chat.</p>
-        </div>
-        <div class="servicepartner">
-            <h1>Service Partners</h1>
-            <img src="AboutImage/AboutImageParten/aws.jpg" class="prtimg">
-            <img src="AboutImage/AboutImageParten/cloud.jpg" class="prtimg">
-            <img src="AboutImage/AboutImageParten/microsoft.jpg" class="prtimg">
-        </div>
-        <div class="spline2">
-            <img src="AboutImage/AboutImageParten/domo.jpg" class="prtimg">
-            <img src="AboutImage/AboutImageParten/twilio.jpg" class="prtimg">
-            <img src="AboutImage/AboutImageParten/uipath.jpg" class="prtimg">
-        </div>
-        <div class="associations">
-            <h1>Associations</h1>
-            <img src="AboutImage/AboutImageParten/startupindia.jpg" class="prtimg">
-            <img src="AboutImage/AboutImageParten/iacoc.jpg" class="prtimg">
-            <img src="AboutImage/AboutImageParten/ama.jpg" class="prtimg">
-        </div>
-        <div class="asline2">
-            <img src="AboutImage/AboutImageParten/nasscom.jpg" class="prtimg">
-            <img src="AboutImage/AboutImageParten/ilta.jpg" class="prtimg">
-        </div>
-    </div>
-    <div id="section5" class="section">
 
-        <div class="story">
-            <h1>Client Stories Spotlight</h1>
-            <p>Our clients are dynamic and passionate about what they do. They're ambitious and driven towards their
-                vision with foresight and prudence. It is our primary motive to understand their mission and address key
-                challenges to help them get there. We build long-term relationships and have a solid track record of
-                getting repeat business from happy clients, while we continue to bring ideas to life for newer clients.
-                But, don't take our word for it. Here's what our clients and partners have to say about us.</p>
-        </div>
+    @media screen and (max-width: 1024px) {
+        .side-content{
+            margin-left: -2%;
+                  }
+                  .side-section img{
+                    width: 428px;
+                    
+                    }
+                  
+                   .side-section {
+                    width: 100%;
+                  
+                   }
+    }
 
 
 
 
-        <div id="imageCarousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#imageCarousel" data-slide-to="1"></li>
-                <li data-target="#imageCarousel" data-slide-to="2"></li>
-                <li data-target="#imageCarousel" data-slide-to="3"></li>
-                <li data-target="#imageCarousel" data-slide-to="4"></li>
-                <li data-target="#imageCarousel" data-slide-to="5"></li>
-                <!-- <li data-target="#imageCarousel" data-slide-to="6"></li> -->
-                <!-- <li data-target="#imageCarousel" data-slide-to="7"></li>
-                <li data-target="#imageCarousel" data-slide-to="8"></li>
-                <li data-target="#imageCarousel" data-slide-to="9"></li> -->
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <a href="##">
-                        <div class="carousel-caption">
-                            <!-- <p>Finance chatbot for leading KPO saves 9375 Hours </p> -->
-                        </div>
-                        <img src="AboutImage/epw0cjelq9jv_k3_7perqq_7f3f736923.png" alt="Image 1">
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="###">
-                        <div class="carousel-caption">
-                            <!-- <p>Caption for Image 2</p> -->
-                        </div>
-                        <img src="AboutImage/rectangle_2_a9e9871927.webp" alt="Image 2">
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="###">
-                        <div class="carousel-caption">
-                            <!-- <p>Caption for Image 3</p> -->
-                        </div>
-                        <img src="AboutImage/chatbot_powered_by_artificial_intelligence_5e403e99e9.png" alt="Image 3">
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="###">
-                        <div class="carousel-caption">
-                            <!-- <p>Caption for Image 4</p> -->
-                        </div>
-                        <img src="AboutImage/enterprise_search_consulting_using_elasticsearch_363f08f0d2.png"
-                            alt="Image 4">
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="###">
-                        <div class="carousel-caption">
-                            <!-- <p>Caption for Image 4</p> -->
-                        </div>
-                        <img src="AboutImage/cloud_based_business_directory_3d5ac2f655 - Copy.png"
-                            alt="Image 4">
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="###">
-                        <div class="carousel-caption">
-                            <!-- <p>Caption for Image 6</p> -->
-                        </div>
-                        <img src="AboutImage/business_process_automation_through_bot_solution_331ae9de56 - Copy.png"
-                            alt="Image 6">
-                    </a>
-                </div>
-                <!-- <div class="carousel-item">
-                    <div class="carousel-caption">
-                        <p>Caption for Image 7</p>
-                    </div>
-                    <img src="image7.jpg" alt="Image 7">
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-caption">
-                        <p>Caption for Image 8</p>
-                    </div>
-                    <img src="image8.jpg" alt="Image 8">
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-caption">
-                        <p>Caption for Image 9</p>
-                    </div>
-                    <img src="image9.jpg" alt="Image 9">
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-caption">
-                        <p>Caption for Image 10</p>
-                    </div>
-                    <img src="image10.jpg" alt="Image 10">
-                </div> -->
-            </div>
-            <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
+
+
+    /* .animated-element {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    
+    .animated-element.visible {
+        opacity: 1;
+        transform: translateY(0);
+    } */
 
 
 
 
-        <div class="Clientelee">
-            <h1>You're in Good Company</h1>
 
-            <div class="imggg">
-                <div class="imgg1"><img src="AboutImage/zuru_.webp" alt=""></div>
-                <div class="imgg1"><img src="AboutImage/ikea.webp" alt=""></div>
-                <div class="imgg1"><img src="AboutImage/piramal.webp" alt=""></div>
-                <div class="imgg1"><img src="AboutImage/kalpataru_group_bd5b617688.webp" alt=""></div>
-
-
-                <div class="imgg1"><img src="AboutImage/symphony_limited.webp" alt=""></div>
-                <div class="imgg1"><img src="AboutImage/zydus_group_.webp" alt=""></div>
-                <div class="imgg1"><img src="AboutImage/deloitte_.webp" alt=""></div>
-                <div class="imgg1"><img src="AboutImage/optimizely.webp" alt=""></div>
-
-
-
-                <div class="imgg1"><img src="AboutImage/ubisoft_f07c2e471f.webp" alt=""></div>
-                <div class="imgg1"><img src="AboutImage/sterling_accuris_945bd38fee.webp" alt=""></div>
-                <div class="imgg1"><img src="AboutImage/escalon_services_d7f622a1dc.webp" alt=""></div>
-                <div class="imgg1"><img src="AboutImage/electronic_arts_1fd9045cb3.webp" alt=""></div>
-
-
-                <div class="imgg1"><img src="AboutImage/kathryn_harbour_3b6bdd09a2.webp" alt=""></div>
-                <div class="imgg1"><img src="AboutImage/hayward_baker_74491818fe.webp" alt=""></div>
-                <div class="imgg1"><img src="AboutImage/granite_properties_13eec539ae.webp" alt=""></div>
-                <div class="imgg1"><img src="AboutImage/ibm_71a9b856b5.webp" alt=""></div>
-
-            </div>
-        </div>
-    </div>
+/* side bar end */
 
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <script src="navScript.js"></script>
 
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-<footer>
-    <div class="container">
-        <div class="sec aboutus">
-            <img src="AboutImage/biglogo.png" alt="logo">
+/* partener start  */
 
-            <p>Vyakurute Technologies, founded in 2018, is a Global Product Engineering Services company offering
-                enterprises future-ready and transformative digital solutions. The organization’s product engineering
-                maestros work out Ahmedabad and USA.</p>
-            <ul class="sci">
-                <li><a href="#"><i class="fa-brands fa-facebook" style="color: #74C0FC;"></i></a></li>
-                <li><a href="#"><i class="fa-solid fa-x" style="color: #111212;"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-instagram" style="color: red;"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-youtube" style="color: #b52626;"></i></a></li>
-            </ul>
-        </div>
-        <div class="quicklinks">
-            <h2>Quick Links</h2>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="AboutUs.html">About US</a></li>
-                <li><a href="service-page.html">Product Engineering</a></li>
+.Leader{
+   
+    margin-bottom: 5%;
+    
+}
+.Leader h1{
+    font-size: 55px;
+    text-align: center;
+    font-family:Neusharp;
+}
+.lead{
+    margin-top: 7%;
+}
 
-                <li><a href="contactpage.html">Contact Us</a></li>
-            </ul>
-        </div>
-        <div class="contact">
-            <h2>Contact Us</h2>
-            <ul class="info">
-                <li>
-                    <span>
-                        <i class="fa-solid fa-phone"></i>
-                    </span>
-                    <p><a href="tel:+919167222521">Call us at +91-9167222521</a></p>
-                </li>
-                <li>
-                    <span>
-                        <i class="fa-solid fa-envelope"></i>
-                    </span>
-                    <p><a href="mailto:info@vyakurute.com">info@vyakurute.com</a></p>
-                </li>
-                <li>
-                    <span>
-                        <i class="fa-solid fa-location-dot"></i>
-                    </span>
-                    <p><a href="#">Ahmedabad , INDIA</a></p>
-                </li>
+.lead p{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
 
-            </ul>
-        </div>
-    </div>
 
-</footer>
-<a href="#" id="scroll" style="display: none;"><span></span></a>
-<div class="copyrighttext">
-    <p>copyright &#169 2024 Designed by <a href="https://sugaam.in">Sugaam.in</a> All Rights Reserved</p>
-</div>
-</html>
+.line1{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.image1 img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+   
+
+}
+.line2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.image2a{
+    padding: 20px;
+    text-align: center;
+    margin-left: 100px;
+ 
+}
+.image22{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: aqua;
+    margin-left: 20px;
+}
+.image2b{
+    padding: 20px;
+    text-align: center;
+    margin-right: 100px;
+}
+.image2a img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+.image2b img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+.line3{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.image3a{
+    padding: 20px;
+    text-align: center;
+    margin-left: 73px;
+}
+.image3b{
+    padding: 20px;
+    text-align: center;
+    margin-right: 100px;
+}
+.image3a img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+.image3b img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+.partner h1{
+    font-family:Neusharp;
+    font-size: 55px;
+    text-align: center;
+    margin-top: 5%;
+}
+.partner p{
+  font-family: Roboto;
+    font-size: 22px;
+    margin-left: 0%;
+    align-items: start;
+}
+
+.contact1{
+    background-color:darkblue;
+         float: left;
+         width: 33.33%;
+         color: white;
+         padding: 0px;
+         height: 100px;
+         text-align: center;
+         border-radius: 25px;
+         border: 4px dotted black;
+}
+.contact2{
+    background-color:darkblue;
+         float: left;
+         width: 33.33%;
+         color: white;
+         padding: 0px;
+         height: 100px;
+         text-align: center;
+         border-radius: 25px;
+         border: 4px dotted black;
+}
+.contact3{
+    background-color:darkblue;
+    float: left;
+    width: 33.33%;
+    color: white;
+    padding: 0px;
+    height: 100px;
+    text-align: center;
+    border-radius: 25px;
+    border: 4px dotted black;
+}
+.servicepartner h1{
+    font-family:Neusharp;
+    color: white;
+    margin-top: 5%;
+    padding-top: 5%;
+}
+.servicepartner {
+   
+  
+    text-align: center;
+    background-color: #423f56;
+    color:white;
+    font-weight:bolder;
+}
+.spline2{
+    font-family: "Open Sans", sans-serif;
+    font-size: large;
+    text-align: center;
+    background-color: #423f56;
+    color:white;
+    font-weight:bolder;
+
+}
+.associations h1{
+    font-family: Neusharp;
+    font-size: 55px;
+    margin-top: 5%;
+    padding-top: 2%;
+}
+.associations{
+  
+ 
+    text-align: center;
+    color:black;
+   
+    padding-bottom: 40px;
+}
+.asline2{
+    font-family: poppins;
+    font-size: large;
+    text-align: center;
+    color:black;
+    font-weight:bolder;
+    padding-bottom: 40px;
+}
+@media (max-width: 450px){
+    .line2{
+        flex-direction: column;
+    }
+    .image2a{
+        margin-right: 100px;
+    }
+    .image2b{
+        margin-left: 100px;
+    }
+    .line3{
+        flex-direction: column;
+    }
+    .image3a{
+        margin-right: 100px;
+    }
+    .image3b{
+        margin-left: 100px;
+    }
+    
+}
+@media (max-width: 450px){
+    .partner p{
+        margin-right: 15%;
+    }
+    .servicepartner h1{
+        padding-top: 50px;
+    }
+    .partner h1{
+        padding-top: 50px;
+        font-size: 35px;
+    }
+    .servicepartner{
+        margin-top: 60px;
+    }
+    .associations{
+        margin-top: 60px;
+    }
+    
+}
+@media (max-width:1024px){
+    .partner p{
+        margin-right: 15%;
+        width: 100%;
+        
+    }
+    .servicepartner h1{
+        padding-top: 50px;
+    }
+    .partner h1{
+        padding-top: 50px;
+        font-size: 35px;
+    }
+    .servicepartner{
+        margin-top: 60px;
+    }
+    .associations{
+        margin-top: 60px;
+    }
+}
+.prtimg{
+    margin-right: 40px;
+}
+@media(max-wdith:768px){
+    .prtimg{
+        margin-right: 400px;
+    }
+}
+/* partener end */
+.carousel-caption p{
+    font-size: 18px;
+}
+@media (max-width:1024px) {
+    .carousel-caption p{
+        position: relative;
+        top: -120px;
+        font-size: 16px;
+    
+    
+    }
+}
+@media (max-width:768px) {
+    .carousel-caption p{
+        position: relative;
+        top: 20px;
+        font-size: 18px;
+    
+    
+    }
+}
+
+@media (max-width:450px) {
+    .carousel-caption p{
+        position: relative;
+        top: -310px;
+        font-size: 16px;
+    
+    
+    }
+}
+
+.sliddd{
+    width: 90%;
+}
+
+
+
+footer {
+    /* position: relative; */
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: #000958;
+    z-index: 80; /* Added z-index to ensure footer is below the navbar */
+    /* margin-left: -9%; */
+}
+
+footer .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-gap: 50px;
+}
+
+footer .container .sec h2 {
+    position: relative;
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-family: 'Neusharp', sans-serif;
+}
+
+footer .container .sec p {
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+}
+
+footer .container .sci {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    justify-content: center;
+}
+
+footer .container .sci li {
+    list-style: none;
+}
+
+footer .container .sci li a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: white;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+footer .container .sci li a i {
+    
+    font-size: 25px;
+}
+
+footer .container .quicklinks h2 {
+    margin-bottom: 15px;
+    font-family: 'Neusharp', sans-serif;
+    color: #17dfb9;
+}
+
+footer .container .quicklinks ul li {
+    list-style: none;
+}
+
+footer .container .quicklinks ul li a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+    font-size: medium;
+}
+
+footer .container .contact .info {
+    list-style: none;
+    position: relative;
+}
+
+footer .container .contact h2 {
+    margin-bottom: 15px;
+    font-family: 'Neusharp', sans-serif;
+    color: #17dfb9;
+}
+
+footer .container .contact .info li {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+/*     margin-bottom: 16px; */
+}
+
+footer .container .contact .info li span {
+    color:#17dfb9;
+    font-size: 20px;
+}
+
+footer .container .contact .info li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.copyrighttext {
+    width: 100%;
+    background: linear-gradient(to right, #bc005b, #4528a5);
+    padding: 20px 100px 30px;
+    text-align: center;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+.copyrighttext a{
+    text-decoration: none;
+    color: white;
+}
+@media (max-width: 991px) {
+    footer {
+        padding: 40px;
+        /* margin-top: 649%; */
+        /* margin-left: 5px; */
+    }
+    footer .container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+    .copyrighttext {
+        padding: 20px 40px 30px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    footer .container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+    }
+    /* .footer{
+        margin-top: 100%;
+    } */
+   
+}
+
+.copyrighttext {
+    width: 100%;
+    background: #000958;
+    /* padding: 20px 100px 30px; */
+    text-align: center;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+.copyrighttext a{
+    text-decoration: none;
+    color: white;
+}
+
+footer .sec{
+   
+    text-align: center;
+    margin-left: -20px;
+}
+
+.quicklinks{
+    /* text-align: center; */
+}
+.contact{
+    /* text-align: center; */
+}
+
+
+
+
+ .fst1{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 5%;
+    }
+    @media (max-width:450px) {
+        .fst1{
+            flex-direction: column;
+            align-items: center;
+        }
+        .ldr{
+            margin-left: 19px;
+        }
+        .cl1{
+            margin-top: 5%;
+        }
+    }
+    .ima{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-left: 44px;
+        background-color: aqua;
+    }
+    .cl1{
+        align-items: center;
+        text-align: center;
+        width: 300px;
+        margin-top: 3%;
+        margin-bottom: 2%;
+       
+    }
+
+ .ldr{
+            margin-top: 7%;
+        }
+
+
+        .ima img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
