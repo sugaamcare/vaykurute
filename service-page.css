@@ -2285,6 +2285,10 @@ nav a.active, nav a:hover {
         .faq-section{
             max-width: 600px;
         }
+        .consultation-button:hover{
+            background: linear-gradient(to right, #bc005b, #4528a5);
+            color: #fff;
+        }
       }
       @media (max-width: 430px){
         .faq-section{
