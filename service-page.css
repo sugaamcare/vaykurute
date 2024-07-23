@@ -380,15 +380,15 @@ nav a.active, nav a:hover {
 
     /* 3rd */
 
-    .trusted-by{
+     .trusted-by{
         font-family: Arial, sans-serif;
-        background-color: #1a1a2e;
+        background-color: #2a2a31;
         color: white;
         margin: 0;
         /* display: flex; */
         justify-content: center;
         align-items: center;
-        height: 70vh;
+        height: 58vh;
         text-align: center;
         width: 100%;
         margin: auto;
@@ -405,17 +405,23 @@ nav a.active, nav a:hover {
       
       .logo-grid {
         display: grid;
-        grid-template-columns: auto auto auto auto;
-        gap: 10px;
-        /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
-        /* gap: 20px; */
+        /* grid-template-columns: auto auto auto auto;
+        gap: 10px; */
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 20px;
         align-items: center;
       }
       
       .logo-item img {
         width: 100%;
-        max-width: 150px;
+        max-width: 180px;
         object-fit: contain;
+      }
+
+      @media (max-width: 1024px) {
+        .logo-item img{
+            max-width: 150px;
+        }
       }
       
       @media (max-width: 786px) {
@@ -430,7 +436,7 @@ nav a.active, nav a:hover {
         }
       
         .logo-item img {
-          max-width: 100px;
+          max-width: 150px;
         }
         
         .logo-grid{
@@ -443,6 +449,10 @@ nav a.active, nav a:hover {
       @media (max-width: 430px){
         .logo-grid {
             grid-template-columns: repeat(2,1fr);
+        }
+
+        .logo-item img{
+            max-width: 100px;
         }
       }
 
