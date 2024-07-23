@@ -22,44 +22,53 @@ function openSection(sectionNumber) {
 
 
 
-let currentSlideIndex = 0;
-const slides = document.querySelectorAll('.slide');
+
+
+
+
+
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slides img');
 const dots = document.querySelectorAll('.dot');
 const totalSlides = slides.length;
 
-function showSlide(index) {
-    if (index >= totalSlides) currentSlideIndex = 0;
-    if (index <0) currentSlideIndex = totalSlides - 1;
-    const offset = currentSlideIndex * -100;
-    document.querySelector('.slider-wrapper').style.transform = `translateX(${offset}%)`;
+const updateSlidePosition = () => {
+    const newPosition = -(currentIndex * 100) + '%';
+    document.querySelector('.slides').style.transform = `translateX(${newPosition})`;
     updateDots();
 }
 
-function nextSlide() {
-    currentSlideIndex++;
-    showSlide(currentSlideIndex);
+const showNextSlide = () => {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlidePosition();
 }
 
-function prevSlide() {
-    currentSlideIndex--;
-    showSlide(currentSlideIndex);
+const currentSlide = (index) => {
+    currentIndex = index;
+    updateSlidePosition();
 }
 
-function currentSlide(index) {
-    currentSlideIndex = index;
-    showSlide(currentSlideIndex);
-}
-
-function updateDots() {
+const updateDots = () => {
     dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === currentSlideIndex);
+        if (index === currentIndex) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
     });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    showSlide(currentSlideIndex);
-    setInterval(nextSlide, 3000); // Change slide every 3 seconds
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => currentSlide(index));
 });
+
+setInterval(showNextSlide, 3000); // Change image every 3 seconds
+
+
+
+
+
+
 
 
 
@@ -104,44 +113,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-
-
-
-
-
-let currentSlideIndexx = 0;
-    const slidess = document.querySelectorAll('.slidee');
-    const dotss = document.querySelectorAll('.dott');
-    const totalSlidess = slidess.length;
-    
-    function showSlidee(index) {
-        if (index >= totalSlidess) currentSlideIndexx = 0;
-        if (index < 0) currentSlideIndexx = totalSlidess - 1;
-        const offsett = currentSlideIndexx * -100;
-        document.querySelector('.slider-wrapperr').style.transform = `translateX(${offsett}%)`;
-        updateDotss();
-    }
-    
-    function nextSlidee() {
-        currentSlideIndexx++;
-        showSlidee(currentSlideIndexx);
-    }
-    
-    function prevSlidee() {
-        currentSlideIndexx--;
-        showSlidee(currentSlideIndexx);
-    }
-    
-    function currentSlidee(index) {
-        currentSlideIndexx = index;
-        showSlidee(currentSlideIndexx);
-    }
-    
-    function updateDotss() {
-        dotss.forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentSlideIndexx);
-        });
-    }
     
     document.addEventListener('DOMContentLoaded', () => {
         showSlidee(currentSlideIndexx);
